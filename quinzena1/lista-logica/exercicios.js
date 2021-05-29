@@ -107,6 +107,11 @@ function checaValidadeInscricaoLabenu() {
   const maior18 = prompt("É maior de 18 anos?")
   const ensinoMedio = prompt("tem ensino medio completo?")
   const disponibilade = prompt("Tem disponibilidade de horário?")
-
-
+  console.log((maior18 == 'sim' && ensinoMedio == 'sim' && disponibilade == 'sim'))
+  // console.log((maior18 && ensinoMedio == disponibilade) ||  // 1
+  //             (!maior18 == ensinoMedio && disponibilade) || // 2
+  //             (!maior18 == ensinoMedio && disponibilade) || // 3
+  //             (maior18 && ensinoMedio == !disponibilade) || // 4
+  //             (!maior18 && ensinoMedio == !disponibilade)   // 5
+  //             ) 
 }
