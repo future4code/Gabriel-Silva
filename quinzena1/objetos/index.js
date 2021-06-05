@@ -110,7 +110,7 @@ console.log(minhaFuncao(pessoa, "altura"))
 
 
 //a) resposta
-const pessoa = {
+const pessoa1 = {
     nome: "Gabriel",
     apelidos: ["Biel","Binho","Bil"]
 }
@@ -118,20 +118,22 @@ const pessoa = {
 const imprimirPessoa = (objeto, propriedade) =>{
     return objeto[propriedade]
 }
-console.log(`Eu sou ${imprimirPessoa(pessoa, "nome")}, mas pode me chamar de: ${(pessoa.apelidos[0])}, ${(pessoa.apelidos[1])} ou ${(pessoa.apelidos[2])}`)
+console.log(`Eu sou ${imprimirPessoa(pessoa1, "nome")}, mas pode me chamar de: 
+${(pessoa1.apelidos[0])}, ${(pessoa1.apelidos[1])} ou ${(pessoa1.apelidos[2])}`)
 // Trecho de código abaixo não funcionou =(
 // console.log(`Eu sou ${imprimirPessoa(pessoa, "nome")}, mas pode me chamar de: ${imprimirPessoa(pessoa,"apelidos[0]")}, ${(imprimirPessoa(pessoa.apelidos[1]))} ou ${(imprimirPessoa(pessoa.apelidos[2]))}`)
 
 //b)
 const pessoa2 = {
-    ...pessoa,
+    ...pessoa1,
     apelidos: ["Bielzinho", "Binhozinho", "Bilzinho"]
 }
 console.log("Apelidos no diminutivo:")
 console.log(`Eu sou ${imprimirPessoa(pessoa2, "nome")}, mas pode me chamar de: ${(pessoa2.apelidos[0])}, ${(pessoa2.apelidos[1])} ou ${(pessoa2.apelidos[2])}`)
+//pulando linha no console
+console.log("\n")
 
-
-//-------------------------- EXERCÍCIO 1 -------------------------- //
+//-------------------------- EXERCÍCIO 2 -------------------------- //
 //Resolva os passos a seguir: 
 //a) Crie dois objetos diferentes com as seguintes propriedades: nome, idade e profissão.
 //b) Escreva uma função que receba esses objetos e retorne um array com as seguintes informações:
@@ -150,20 +152,16 @@ const pessoa3 = {
 }
 
 const pessoa4 = {
-    ...pessoa3,
     nome: "Eduardo",
     idade: 20,
     profissao: "Estudante",
     empregado: false
 }
-
-const retornandoArrayPessoas = (pessoas) => {
-    const arrayPessoas3 = [pessoa3]
-    const arrayPessoas4 = [pessoa4]
-    return pessoas
+//b) resposta
+const retornandoArrayPessoas = (objeto1) => {
+    const arrayPessoa = [objeto1.nome,objeto1.nome.length,objeto1.idade,objeto1.profissao,objeto1.profissao.length,objeto1.empregado,]
+    return arrayPessoa
     }
+console.log(retornandoArrayPessoas(pessoa3))
+console.log(retornandoArrayPessoas(pessoa4))
 
-console.log(retornandoArrayPessoas(pessoa3,"arrayPessoas3"))
-console.log(retornandoArrayPessoas(pessoa4,"arrayPessoas4"))
-console.log(`A profissão do ${retornandoArrayPessoas(pessoa3.nome)} tem ${retornandoArrayPessoas(pessoa3.profissao.length)} caractéries`)
-console.log(`A profissão do ${retornandoArrayPessoas(pessoa4.nome)} tem ${retornandoArrayPessoas(pessoa4.profissao.length)} caractéries`)
