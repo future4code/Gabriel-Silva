@@ -206,5 +206,20 @@ carrinhoDeFrutas(fruta1)
 carrinhoDeFrutas(fruta2)
 carrinhoDeFrutas(fruta3)
 console.log(carrinho)
+console.log("\n")
+
+// ---------------------------- DESAFIOS ----------------------------
+console.log("Desafio 1")
+//1. Crie um função que pergunte ao usuário seu nome, 
+//   sua idade e sua profissão e depois imprima no console um objeto com essas propriedades. 
+//   Depois de imprimir o novo objeto, imprima também o tipo dele para garantir que é um objeto.
 
 
+
+console.log("\n")
+console.log("Desafio 2")
+
+
+
+console.log("\n")
+console.log("Desafio 3")
