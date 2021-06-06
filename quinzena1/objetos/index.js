@@ -110,6 +110,7 @@ console.log(minhaFuncao(pessoa, "altura"))
 
 
 //a) resposta
+console.log("Exercício 1")
 const pessoa1 = {
     nome: "Gabriel",
     apelidos: ["Biel","Binho","Bil"]
@@ -132,6 +133,7 @@ console.log("Apelidos no diminutivo:")
 console.log(`Eu sou ${imprimirPessoa(pessoa2, "nome")}, mas pode me chamar de: ${(pessoa2.apelidos[0])}, ${(pessoa2.apelidos[1])} ou ${(pessoa2.apelidos[2])}`)
 //pulando linha no console
 console.log("\n")
+console.log("Exercício 2")
 
 //-------------------------- EXERCÍCIO 2 -------------------------- //
 //Resolva os passos a seguir: 
@@ -148,20 +150,61 @@ const pessoa3 = {
     nome: "Luiz",
     idade: 25,
     profissao: "Desenvolvedor",
-    empregado: true
 }
-
 const pessoa4 = {
     nome: "Eduardo",
     idade: 20,
     profissao: "Estudante",
-    empregado: false
 }
 //b) resposta
 const retornandoArrayPessoas = (objeto1) => {
-    const arrayPessoa = [objeto1.nome,objeto1.nome.length,objeto1.idade,objeto1.profissao,objeto1.profissao.length,objeto1.empregado,]
+    const arrayPessoa = [objeto1.nome,objeto1.nome.length,objeto1.idade,objeto1.profissao,objeto1.profissao.length,]
     return arrayPessoa
     }
+
 console.log(retornandoArrayPessoas(pessoa3))
 console.log(retornandoArrayPessoas(pessoa4))
+//Pulando linha no console
+console.log("\n")
+
+//-------------------------- EXERCÍCIO 3 -------------------------- //
+console.log("Exercício 3")
+//Resolva os passos a seguir:
+
+//a) Crie uma variável de escopo global que guarde um `array` vazio chamada `carrinho`
+//b) Crie três novos objetos que representem frutas de um sacolão. Eles devem ter as seguintes 
+//   propriedades: nome (`string`) e disponibilidade (`boolean` - devem começar como `true`)
+//c) Crie uma função que **receba** um objeto fruta por **parâmetro** e coloque-a dentro do array de `carrinho`. 
+//   Invoque essa função passando os três objetos criados. 
+
+
+//a) Resposta
+const carrinho = []
+
+//b) Resposta
+const fruta1 = {
+    fruta: "Banana",
+    disponibilidade: true
+}
+
+const fruta2 = {
+    fruta: "Maça",
+    disponibilidade: true
+}
+
+const fruta3 = {
+    fruta: "Melão",
+    disponibilidade: true
+}
+//c) Resposta
+const carrinhoDeFrutas = (fruta) =>{
+    carrinho.push(fruta)
+    return carrinho
+}
+//d) Resposta
+carrinhoDeFrutas(fruta1)
+carrinhoDeFrutas(fruta2)
+carrinhoDeFrutas(fruta3)
+console.log(carrinho)
+
 
