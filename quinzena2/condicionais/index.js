@@ -194,8 +194,63 @@ if (genFilme === "fantasia" && custoIngresso <= 15 ){
 // Lembrando que o valor de jogos internacionais é o mesmo de jogos domésticos, mas seus preços devem ser 
 // multiplicados pelo valor do dólar (considerar o dólar = R$4,10)
 
-// const nomeCompleto = prompt("Informe seu nome completo")
-// const tipoJogo = prompt("Qual o jogo quer assistir?\nDigite sua opção conforme informações abaixo\nIN => para um jogo internacional\nDO => para um jogo doméstico")
-// const etapaJogo = prompt(`Em qual etapa está o jogo selecionado?\nSF => Semifinal\nFI => Final\nDT => Decisão do 3º lugar`)
-// const categoriaIngresso = Number(prompt("Qual a categoria do ingresso?\n1 => arquibancada azul\n2 => arquibancada verde\n3 => arquibancada vermelha\n4 => arquibancada lilás "))
-// const quantidadeIngresso = Number(prompt("Quantos ingressos você deseja?"))
+const nomeCompleto = prompt("Informe seu nome completo")
+let tipoJogo = prompt("Qual o jogo quer assistir?\nDigite sua opção conforme informações abaixo\nIN => para um jogo internacional\nDO => para um jogo doméstico clássico") 
+if(tipoJogo === "IN"){tipoJogo = "Internacional"}else{tipoJogo = "Doméstico"}
+let etapaJogo = prompt(`Em qual etapa está o jogo selecionado?\nFI => Final\nSF => Semifinal\nDT => Decisão do 3º lugar`)
+if(etapaJogo === "FI"){etapaJogo = "Final"}else if(etapaJogo === "SF"){etapaJogo === "SemiFinal"}else{etapaJogo = "Decisão 3º lugar"}
+const categoriaIngresso = Number(prompt("Qual a categoria do ingresso?\n1 => setor azul\n2 => setor verde\n3 => setor vermelho\n4 => setor lilás "))
+const quantidaDeIngresso = Number(prompt("Quantos ingressos você deseja?"))
+
+const valorDolar = 4.10
+let valorIngressoUnitarioFinal = [1980,1320,880,330]
+let valorIngressoUnitarioSemiFinal = [1320,880,550,220]
+let valorIngressoUnitarioTerceiroLugar = [660,440,330,170]
+
+const dadosComprador = {
+  nome: nomeCompleto,
+  tipoJogo: tipoJogo,
+  etapaJogo: etapaJogo,
+  categoriaIngresso: categoriaIngresso,
+  quantidaDeIngresso: quantidaDeIngresso,
+}
+
+const valorTotalIngresso = (quantidaDeIngresso) => {
+  if(tipoJogo === "Internacional" && etapaJogo === "Final"){
+    let totalCompra = 0
+    switch(categoriaIngresso){
+      case 1:
+      totalCompra = (valorIngressoUnitarioFinal[0]*valorDolar)*quantidaDeIngresso
+      break 
+      case 2:
+      totalCompra = (valorIngressoUnitarioFinal[1]*valorDolar)*quantidaDeIngresso
+      break
+      case 3:
+      totalCompra = (valorIngressoUnitarioFinal[2]*valorDolar)*quantidaDeIngresso
+      break
+      case 4:
+      totalCompra = (valorIngressoUnitarioFinal[3]*valorDolar)*quantidaDeIngresso
+      break
+      default:
+        "Opção inválida, precione F5 e retorne do início!"
+      break
+    }
+    return `Valor total: U$ ${totalCompra}`
+  }else if(tipoJogo === "Domestico"){
+  const totalCompra = valueIngresso * quantidaDeIngresso
+  return `Valor total: R$ ${totalCompra}`
+  }
+}
+
+console.log(`
+---Dados da compra--- 
+Nome do cliente: ${dadosComprador.nome} 
+Tipo do jogo: ${dadosComprador.tipoJogo} 
+Etapa do jogo: ${dadosComprador.etapaJogo} 
+Categoria:  ${dadosComprador.categoriaIngresso} 
+Quantidade de Ingressos:  ${dadosComprador.quantidaDeIngresso}
+---Valores--- 
+Valor do ingresso: ??
+Valor total:  ${valorTotalIngresso(dadosComprador.quantidaDeIngresso)}
+`)
+
