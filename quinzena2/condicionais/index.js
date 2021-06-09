@@ -92,9 +92,9 @@ console.log("Exercício 1")
 console.log("Será que você pode aprender a dirigir?")
 const idadeUsuario = Number(prompt("Informe sua idade "))
     if (idadeUsuario >= 18){
-        console.log(`Você tem ${idadeUsuario} anos e pode sim se habilitar para dirigir! Ah, e pode ser preso também!`)
+        console.log(`Output: Você tem ${idadeUsuario} anos e pode sim se habilitar para dirigir! Ah, e pode ser preso também!`)
     }else{
-        console.log("Você não é +18, não pode dirigir!!! E caso insista e for pego pelo Maik, seus resposáveis irão arcar com seu erro, além que, podes ir para a FEBÉM!")   
+        console.log("Output: Você não é +18, não pode dirigir!!! E caso insista e for pego pelo Maik, seus resposáveis irão arcar com seu erro, além que, podes ir para a FEBÉM!")   
     }
 console.log("\n")
 
@@ -109,11 +109,11 @@ console.log("M (matutino)\nV (Vespertino)\nN (Noturno)")
 const turnoEscolar1 = prompt("Em que turno você estuda? M (matutino) ou V (Vespertino) ou N (Noturno)")
 
 if (turnoEscolar1 === "M"){
-    console.log("Bom dia!")
+    console.log("Output: Bom dia!")
 }else if(turnoEscolar1 === "V"){
-    console.log("Boa tarde!")
+    console.log("Output: Boa tarde!")
 }else{
-    console.log("Boa noite!")
+    console.log("Output: Boa noite!")
 }
 console.log("\n")
 
@@ -127,16 +127,16 @@ const turnoEscolar2 = prompt("Em que turno você estuda? M (matutino) ou V (Vesp
 switch (turnoEscolar2){
 
     case "M":
-        console.log(`Bom dia! Você estuda no período ${turnoEscolar2}atutino.`)
+        console.log(`Output: Bom dia! Você estuda no período ${turnoEscolar2}atutino.`)
         break
     case "V":
-        console.log(`Boa tarde! Você estuda no período ${turnoEscolar2}espertino.`)
+        console.log(`Output: Boa tarde! Você estuda no período ${turnoEscolar2}espertino.`)
         break
     case "N":
-        console.log(`Boa noite! Você estuda no período ${turnoEscolar2}oturno.`)
+        console.log(`Output: Boa noite! Você estuda no período ${turnoEscolar2}oturno.`)
         break
     default:
-        console.log("Estuda na madrugada?")
+        console.log("Output: Estuda na madrugada?")
         break
 }
 console.log("\n")
@@ -153,9 +153,9 @@ const generoFilme = prompt("Informe o gênero do filme")
 const valorIngresso = Number(prompt("Informe o valor do ingresso"))
 
 if (generoFilme === "fantasia" && valorIngresso <= 15 ){
-    console.log("Bom filme! O gênero é "+generoFilme+" e o valor do ingresso é R$ "+valorIngresso)
+    console.log("Output: Bom filme! O gênero é "+generoFilme+" e o valor do ingresso é R$ "+valorIngresso)
 }else{
-    console.log("Escolha outro filme :( \nAinda não temos o gênero "+generoFilme+" com ingresso no valor de R$"+valorIngresso+"\nQue tal um de fantasia e com valor de 15R$ ?")
+    console.log("Output: Escolha outro filme :( \nAinda não temos o gênero "+generoFilme+" com ingresso no valor de R$"+valorIngresso+"\nQue tal um de fantasia e com valor de 15R$ ?")
 }
 console.log("\n")
 // ------------------------------ DESAFIOS ------------------------------ // 
@@ -168,10 +168,34 @@ console.log("DESAFIO 1")
 console.log("Vamos assisir a um filme?")
 const genFilme = prompt("Informe o gênero do filme")
 const custoIngresso = Number(prompt("Informe o valor do ingresso"))
-const lanchinho = prompt("Qual lanchinho irá comprar para acompanhar o filme?")
+
 
 if (genFilme === "fantasia" && custoIngresso <= 15 ){
-    console.log("Bom filme! O gênero é "+genFilme+" e o valor do ingresso é R$ "+custoIngresso+"\n e aproveite seu "+lanchinho)
-}else{
-    console.log("Escolha outro filme :( \nAinda não temos o gênero "+genFilme+" com ingresso no valor de R$"+custoIngresso+"\nQue tal um de fantasia e com valor de 15R$ ?")
-}
+    const lanchinho = prompt("Qual lanchinho irá comprar para acompanhar o filme?")
+    console.log("Output: Bom filme!\nO gênero é "+genFilme+" e o valor do ingresso é R$ "+custoIngresso+"\nAproveite!\nLanchinho comprado: "+lanchinho)
+  }else{
+      console.log("Output: Escolha outro filme :( \nAinda não temos o gênero "+genFilme+" com ingresso neste valor: R$"+custoIngresso+"\n\nQue tal escolher o genero fantasia e com ingresso no valor de 15R$ ?\n\nApenas recarregue a página!")
+  }
+
+// 2-
+// Você foi contratado para criar um sistema de vendas de ingressos de jogos de um estádio de futebol. 
+// Para esta compra, o usuário deve fornecer algumas informações:
+
+// - Nome completo;
+// - Tipo de jogo: IN indica internacional; e DO indica doméstico;
+// - Etapa do jogo: SF indica semi-final; DT indica decisão de terceiro lugar; e FI indica final
+// - Categoria: pode ser as opções 1, 2, 3 ou 4;
+// - Quantidade de ingressos
+
+// O seu sistema deve solicitar estas informações ao usuário, através do prompt . 
+// Além disso, ele deve imprimir tudo isso, junto com o valor de cada ingresso e o valor total 
+// que o usuário tem que pagar (ou seja, o valor unitário do ingresso multiplicado pela quantidade). 
+// Abaixo, há a tabela com os valores de cada ingresso e exemplos de execução do programa. 
+// Lembrando que o valor de jogos internacionais é o mesmo de jogos domésticos, mas seus preços devem ser 
+// multiplicados pelo valor do dólar (considerar o dólar = R$4,10)
+
+// const nomeCompleto = prompt("Informe seu nome completo")
+// const tipoJogo = prompt("Qual o jogo quer assistir?\nDigite sua opção conforme informações abaixo\nIN => para um jogo internacional\nDO => para um jogo doméstico")
+// const etapaJogo = prompt(`Em qual etapa está o jogo selecionado?\nSF => Semifinal\nFI => Final\nDT => Decisão do 3º lugar`)
+// const categoriaIngresso = Number(prompt("Qual a categoria do ingresso?\n1 => arquibancada azul\n2 => arquibancada verde\n3 => arquibancada vermelha\n4 => arquibancada lilás "))
+// const quantidadeIngresso = Number(prompt("Quantos ingressos você deseja?"))
