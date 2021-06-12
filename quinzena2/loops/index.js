@@ -95,7 +95,8 @@
 // a) Escreva um programa que **imprime** cada um dos valores do array original.
 // b) Escreva um programa que **imprime** cada um dos valores do array original divididos por 10
 // c) Escreva um programa que **crie** um novo array contendo, somente, os números pares do array original e **imprima** esse novo array
-// d) Escreva um programa que **crie** um novo array contendo strings, da seguinte forma: "O elemento do índex `i` é: `numero`". Depois, **imprima** este novo array.
+// d) Escreva um programa que **crie** um novo array contendo strings, da seguinte forma: 
+// "O elemento do índex `i` é: `numero`". Depois, **imprima** este novo array.
 // e) Escreva um programa que imprima no console o maior e o menor números contidos no array original
 
 const arrayOriginal = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
@@ -133,3 +134,14 @@ const ArrayPares = (inputArrayPares) =>{
 console.log(ArrayPares(arrayOriginal))
 
 //d)
+console.log("\nExercício d")
+const imprimeNovoArray = (inputArrayPosicaoValor) =>{
+    
+    for (let i = 0; i < inputArrayPosicaoValor.length; i++){
+        console.log("O elemento do índex "+ i + " é: "+ inputArrayPosicaoValor[i] +".")
+    }
+}
+imprimeNovoArray(arrayOriginal)
+
+
+//e)
