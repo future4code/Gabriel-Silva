@@ -136,12 +136,29 @@ console.log(ArrayPares(arrayOriginal))
 //d)
 console.log("\nExercício d")
 const imprimeNovoArray = (inputArrayPosicaoValor) =>{
-    
+    novoArray = []
+
     for (let i = 0; i < inputArrayPosicaoValor.length; i++){
-        console.log("O elemento do índex "+ i + " é: "+ inputArrayPosicaoValor[i] +".")
+        novoArray.push(`O elemento do índex ${i} é: ${inputArrayPosicaoValor[i]}`)
+    }
+    return novoArray
+}
+console.log(imprimeNovoArray(arrayOriginal))
+
+
+console.log("\nExercício e")
+//e)
+const acharMaiorMenosDoarray = (arrayNumeros) =>{
+let maior =0 
+let menor = 12100000
+
+    for (let i = 0; i < arrayNumeros.length ;i++){
+     if(arrayNumeros[i] > maior ){
+         maior = arrayNumeros[i]
+    }else if(arrayNumeros[i]<menor){
+        menor = arrayNumeros[i]
     }
 }
-imprimeNovoArray(arrayOriginal)
-
-
-//e)
+    return `O maior número é ${maior} e o menor é ${menor}` 
+}
+console.log(acharMaiorMenosDoarray(arrayOriginal))
