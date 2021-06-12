@@ -1,12 +1,33 @@
-/**
- * EXEMPLO DE UTILIZAÇÃO DA 'comprarCarta'
- * 
- * 
-    const carta = comprarCarta(); // Sorteia uma carta. Por exemplo, o rei de ouros
+
+//EXEMPLO DE UTILIZAÇÃO DA 'comprarCarta'
+ 
+comprarCarta(); // Sorteia uma carta. Por exemplo, o rei de ouros
     
-    console.log(carta.texto) // imprime o texto da carta. Exemplo: "K♦️" (indica "K" de ouros)
-    console.log(carta.valor) // imprime o valor da carta (um número). Exemplo: 10 (dado que "K" vale 10)
- * 
- * 
- * 
- */
+
+console.log("♦♠♥♣ Welcome the game Blackjack ♦♠♥♣\n")
+let jogo = confirm("Deseja iniciar uma nova rodada?")
+
+   if (jogo){
+   let usuarioCompra1= comprarCarta()
+   let usuarioCompra2 = comprarCarta()
+   let computadorCompra1 = comprarCarta()
+   let computadorCompra2 = comprarCarta()
+
+   let pontuacaoUsuario = usuarioCompra1.valor + usuarioCompra2.valor
+   let pontuacaoPc = computadorCompra1.valor+ computadorCompra2.valor
+
+   console.log(`\nUsuário - cartas: ${usuarioCompra1.texto} ${usuarioCompra2.texto} - Pontuação: ${pontuacaoUsuario} \n`)
+   console.log(`\nComputador - cartas: ${computadorCompra1.texto} ${computadorCompra2.texto} - Pontuação: ${pontuacaoPc} \n`)
+
+   if (pontuacaoUsuario > pontuacaoPc){
+      console.log("\n♥ Usuário venceu!")
+   }else if(pontuacaoPc > pontuacaoUsuario){
+      console.log("\n♥ Computador venceu!")
+   }else{
+      console.log("♦ Empatou!")
+   }
+    
+
+}  else {
+   console.log("♦♠♥♣ O jogo chegou ao fim. ♦♠♥♣")
+}
