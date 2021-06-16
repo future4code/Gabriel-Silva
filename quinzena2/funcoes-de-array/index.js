@@ -146,14 +146,15 @@ console.log(produtosFiltrados)
 // console.log(precoItens)
 
 //Com a ajuda do colega Ryan, solucionamos o problema da seguinte maneira:
+console.log("\nb) Nome e preço de itens com 5% de desconto:")
 const arrayItemComDesconto = produtos.map((inputItens) =>{
-    return {nome: inputItens.nome, preco: 0.05*inputItens.preco.toFixed(2)}
+    return {nome: inputItens.nome, preco: (inputItens.preco - (0.05*inputItens.preco)).toFixed(2)}
 })
 console.log(arrayItemComDesconto)
 
 
 //)c) Crie um novo array que contenha apenas os objetos da categoria Bebidas 
-console.log("\nd) Array somente com as bebidas:")
+console.log("\nc) Array somente com as bebidas:")
 const filtrarBebidas = produtos.filter ((inputBebidas) => {
     return inputBebidas.categoria === "Bebidas"
 })
@@ -168,7 +169,7 @@ console.log(listaProdutos)
 
 //e) Crie um novo array onde cada item é uma frase "Compre [NOME] por [PREÇO]". 
 // Esse array deve conter frases apenas dos itens cujo nome contenha a palavra "Ypê"
-
+console.log("\ne) Array de objetos apenas com a palavra Ypê montando uma frase")
 let listaProdutos2 = produtos.filter ((inputProduto)=>{
     return inputProduto.nome.includes("Ypê")
 })
