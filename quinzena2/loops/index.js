@@ -95,7 +95,8 @@
 // a) Escreva um programa que **imprime** cada um dos valores do array original.
 // b) Escreva um programa que **imprime** cada um dos valores do array original divididos por 10
 // c) Escreva um programa que **crie** um novo array contendo, somente, os números pares do array original e **imprima** esse novo array
-// d) Escreva um programa que **crie** um novo array contendo strings, da seguinte forma: "O elemento do índex `i` é: `numero`". Depois, **imprima** este novo array.
+// d) Escreva um programa que **crie** um novo array contendo strings, da seguinte forma: 
+// "O elemento do índex `i` é: `numero`". Depois, **imprima** este novo array.
 // e) Escreva um programa que imprima no console o maior e o menor números contidos no array original
 
 const arrayOriginal = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
@@ -133,3 +134,31 @@ const ArrayPares = (inputArrayPares) =>{
 console.log(ArrayPares(arrayOriginal))
 
 //d)
+console.log("\nExercício d")
+const imprimeNovoArray = (inputArrayPosicaoValor) =>{
+    novoArray = []
+
+    for (let i = 0; i < inputArrayPosicaoValor.length; i++){
+        novoArray.push(`O elemento do índex ${i} é: ${inputArrayPosicaoValor[i]}`)
+    }
+    return novoArray
+}
+console.log(imprimeNovoArray(arrayOriginal))
+
+
+console.log("\nExercício e")
+//e)
+const acharMaiorMenosDoarray = (arrayNumeros) =>{
+let maior =0 
+let menor = 12100000
+
+    for (let i = 0; i < arrayNumeros.length ;i++){
+     if(arrayNumeros[i] > maior ){
+         maior = arrayNumeros[i]
+    }else if(arrayNumeros[i]<menor){
+        menor = arrayNumeros[i]
+    }
+}
+    return `O maior número é ${maior} e o menor é ${menor}` 
+}
+console.log(acharMaiorMenosDoarray(arrayOriginal))
