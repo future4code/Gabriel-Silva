@@ -1,6 +1,8 @@
 // EXERCÍCIO 01
 function inverteArray(array) {
-  
+  //Pensar em outra forma de realizar o código!
+  const inverterArray = array.reverse()
+  return inverterArray
 }
 
 // EXERCÍCIO 02
