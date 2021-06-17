@@ -5,18 +5,24 @@ function inverteArray(array) {
 
 // EXERCÍCIO 02
 function retornaNumerosParesElevadosADois(array) {
-  function potenciaDosPares(array){
-    for (let i = 0; i < array.lenght; i++)
-    if(array(i % 2 === 0)){
-      i**2
+  let numerosPotencia = []
+  for(let i = 0; i < array.length ; i++){
+    if (array[i] % 2 === 0 ){
+      numerosPotencia.push(array[i]**2)
     }
-    return array
-  }  
+  }
+  return numerosPotencia
 }
 
 // EXERCÍCIO 03
 function retornaNumerosPares(array) {
-
+    let numerosPares = []
+    for(let i = 0; i < array.length ; i++){
+      if (array[i] % 2 === 0 ){
+        numerosPares.push(array[i])
+      }
+    }
+    return numerosPares
 }
 
 // EXERCÍCIO 04
