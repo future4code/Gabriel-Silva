@@ -39,12 +39,30 @@ return maiorNumero
 
 // EXERCÍCIO 05
 function retornaQuantidadeElementos(array) {
-  
+    return array.length
 }
 
 // EXERCÍCIO 06
 function retornaExpressoesBooleanas() {
 
+// a) `booleano1 && booleano2 && !booleano4` 
+//        T       e      F     e      T
+// b) `(booleano1 && booleano2) || !booleano3` 
+
+// c)  `(booleano2 || booleano3) && (booleano4 || booleano1)` 
+
+// d) `!(booleano2 && booleano3) || !(booleano1 && booleano3)` 
+    
+// e) `!(booleano1) && !(booleano3) || (!booleano4 && booleano3 && booleano3)`
+
+
+const booleano1 = true // V
+const booleano2 = false // F
+const booleano3 = !booleano2 // V 
+const booleano4 = !booleano3 // F
+  
+  return [false, false, true, true, true]
+ 
 }
 
 // EXERCÍCIO 07
