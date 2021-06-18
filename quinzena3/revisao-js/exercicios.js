@@ -68,7 +68,6 @@ const booleano4 = !booleano3 // F
 // EXERCÍCIO 07
 function retornaNNumerosPares(n) {
   let retornaPares = []
-
   for(let i = 0; i < n; i++){
     retornaPares.push(i*2)
   }
@@ -80,6 +79,15 @@ function checaTriangulo(a, b, c) {
   // return 'Escaleno'
   // return 'Equilátero'
   // return 'Isósceles'
+
+  if(a && b === c){
+    return `Equilátero`
+    }else if(a === b || !c){
+      return `Isósceles`
+       } else if(!a || !b === !c){
+           return `Escaleno`
+              }
+
 }
 
 // EXERCÍCIO 09
