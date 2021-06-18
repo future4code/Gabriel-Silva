@@ -46,15 +46,15 @@ function retornaQuantidadeElementos(array) {
 function retornaExpressoesBooleanas() {
 
 // a) `booleano1 && booleano2 && !booleano4` 
-//        T       e      F     e      T
+  //    false pois há dois falses - operador && basta apenas um false
 // b) `(booleano1 && booleano2) || !booleano3` 
-
+  //    false pois há apenas um false - o booleano3 está em negação, tornando assim a compareção em false
 // c)  `(booleano2 || booleano3) && (booleano4 || booleano1)` 
-
+  //    true
 // d) `!(booleano2 && booleano3) || !(booleano1 && booleano3)` 
-    
+  //    true 
 // e) `!(booleano1) && !(booleano3) || (!booleano4 && booleano3 && booleano3)`
-
+  //    true 
 
 const booleano1 = true // V
 const booleano2 = false // F
@@ -67,7 +67,12 @@ const booleano4 = !booleano3 // F
 
 // EXERCÍCIO 07
 function retornaNNumerosPares(n) {
+  let retornaPares = []
 
+  for(let i = 0; i < n; i++){
+    retornaPares.push(i*2)
+  }
+  return retornaPares
 }
 
 // EXERCÍCIO 08
