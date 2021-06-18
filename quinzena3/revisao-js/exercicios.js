@@ -1,8 +1,11 @@
 // EXERCÍCIO 01
 function inverteArray(array) {
   //Pensar em outra forma de realizar o código!
-  const inverterArray = array.reverse()
-  return inverterArray
+  // const inverterArray = array.reverse()
+  // return inverterArray
+  // resolvido após analisar as dúvidas enviadas no johnson_duvidas
+  const arrayInvertido = array.map((valor, i) => array[array.length -1 -i]);
+  return arrayInvertido
 }
 
 // EXERCÍCIO 02
@@ -98,6 +101,17 @@ function comparaDoisNumeros(num1, num2) {
   //   maiorDivisivelPorMenor: Y,
   //   diferenca: Z
   // }
+  let maiorNumero = -Infinity
+    for(let i = 0; i < array.length; i++){
+    if(array[i]>maiorNumero)
+      maiorNumero = array[i]
+  }
+  return maiorNumero
+
+
+
+
+
 }
 
 // EXERCÍCIO 10
