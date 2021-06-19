@@ -108,7 +108,7 @@ function comparaDoisNumeros(num1, num2) {
     if(num1>num2){
       maiorNumero = num1
     }else{
-        maiorNumero = num2
+      maiorNumero = num2
     }
     
     if(num2%num1 === 0 ){
@@ -124,7 +124,7 @@ function comparaDoisNumeros(num1, num2) {
 
 // EXERCÍCIO 10
 function segundoMaiorEMenor(array) {
-
+  
 }
 
 // EXERCÍCIO 11
@@ -189,11 +189,24 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 
 // EXERCÍCIO 19A
 function ordenaPorNome(consultasNome) {
-
+  
+  const newArray = consultasNome.sort(function (a, b) {
+    if (a.nome > b.nome) {
+      return 1;
+    }
+    if (a.nome < b.nome) {
+      return -1;
+    }
+    // a must be equal to b
+    return 0;
+  });
+return newArray
 }
 
 // EXERCÍCIO 19B
 function ordenaPorData(consultasData) {
+
+  
 
 }
 
