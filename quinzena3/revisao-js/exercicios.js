@@ -89,8 +89,7 @@ function checaTriangulo(a, b, c) {
       return `Isósceles`
        } else if(!a || !b === !c){
            return `Escaleno`
-              }
-
+        }
 }
 
 // EXERCÍCIO 09
@@ -101,18 +100,27 @@ function comparaDoisNumeros(num1, num2) {
   //   maiorDivisivelPorMenor: Y,
   //   diferenca: Z
   // }
-  let maiorNumero = -Infinity
-    for(let i = 0; i < array.length; i++){
-    if(array[i]>maiorNumero)
-      maiorNumero = array[i]
+
+  let maiorNumero = num1
+  let maiorDivisivelPorMenor = true
+  let diferenca = 0
+  
+    if(num1>num2){
+      maiorNumero = num1
+    }else{
+        maiorNumero = num2
+    }
+    
+    if(num2%num1 === 0 ){
+      maiorDivisivelPorMenor 
+    }else{
+      maiorDivisivelPorMenor = false
+    }
+
+    diferenca = Math.abs(num2 - num1)
+
+    return {"maiorNumero":maiorNumero,"maiorDivisivelPorMenor":maiorDivisivelPorMenor,"diferenca":diferenca}
   }
-  return maiorNumero
-
-
-
-
-
-}
 
 // EXERCÍCIO 10
 function segundoMaiorEMenor(array) {
