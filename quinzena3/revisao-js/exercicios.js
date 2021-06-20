@@ -231,18 +231,27 @@ function multiplicaArrayPor2(array) {
       numerosMultiplicados.push(numeros * 2)
   }
   return numerosMultiplicados
-  console.log(multiplicaArrayPor2S)
-
 }
 
 // EXERCÍCIO 17B
 function multiplicaArrayPor2S(array) {
-
+  let numerosMultiplicados = []
+  for(let numeros of array){
+    numerosMultiplicados.push((numeros * 2).toString())
+  }
+return numerosMultiplicados
 }
 
 // EXERCÍCIO 17C
 function verificaParidade(array) {
-
+  const novoArray = array.map((inputArray) => {
+    if (inputArray % 2 === 0) {
+      return `${inputArray} é par`
+    } else {
+      return `${inputArray} é ímpar`
+    }
+  })
+  return novoArray
 }
 
 // EXERCÍCIO 18A
