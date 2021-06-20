@@ -226,6 +226,12 @@ function menoresDe18(arrayDePessoas) {
 
 // EXERCÍCIO 17A
 function multiplicaArrayPor2(array) {
+  let numerosMultiplicados = []
+    for(let numeros of array){
+      numerosMultiplicados.push(numeros * 2)
+  }
+  return numerosMultiplicados
+  console.log(multiplicaArrayPor2S)
 
 }
 
