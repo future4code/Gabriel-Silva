@@ -266,7 +266,13 @@ function retornaPessoasAutorizadas(pessoas) {
 
 // EXERCÍCIO 18B
 function retornaPessoasNaoAutorizadas(pessoas) {
-
+// Dica dos colegas = negar o if do exercício 18A
+  const naoAutorizaPessoas = pessoas.filter((inputPessoas)=>{
+    if(!(inputPessoas.idade > 14 && inputPessoas.idade < 60 && inputPessoas.altura >= 1.5)){
+      return inputPessoas
+    }
+  })
+  return naoAutorizaPessoas
 }
 
 // EXERCÍCIO 19A
