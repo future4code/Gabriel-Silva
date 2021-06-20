@@ -124,7 +124,26 @@ function comparaDoisNumeros(num1, num2) {
 
 // EXERCÍCIO 10
 function segundoMaiorEMenor(array) {
+  let novoArray = []
+  let maior = -Infinity
+  let menor = Infinity
+
+  for(let i = 0; i < array.length; i++){
+    if(array[i] > maior){
+      maior = array[i] -1
+    }
+  }
+  novoArray.push(maior)
   
+  for(let i = 0; i < array.length; i++){
+    if(array[i] < menor){
+      menor = array[i] + 1
+    }
+  }
+  novoArray.push(menor)
+
+  return novoArray
+
 }
 
 // EXERCÍCIO 11
@@ -134,7 +153,7 @@ function ordenaArray(array) {
 
 // EXERCÍCIO 12
 function filmeFavorito() {
-
+  
 }
 
 // EXERCÍCIO 13
@@ -189,8 +208,10 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 
 // EXERCÍCIO 19A
 function ordenaPorNome(consultasNome) {
-  
+  //Exercício resolvido após explicação do Bruno durante o plantão 19/06/2021
+  //
   const newArray = consultasNome.sort(function (a, b) {
+
     if (a.nome > b.nome) {
       return 1;
     }
