@@ -128,8 +128,8 @@ function segundoMaiorEMenor(array) {
   let maior = -Infinity
   let menor = Infinity
 
-  for(let i = 0; i < array.length; i++){
-    if(array[i] > maior){
+  for(let i = 0; i <= array.length; i++){
+    if(array[i] >= maior){
       maior = array[i] -1
     }
   }
@@ -143,12 +143,26 @@ function segundoMaiorEMenor(array) {
   novoArray.push(menor)
 
   return novoArray
-
 }
 
 // EXERCÍCIO 11
 function ordenaArray(array) {
-
+// Exercício resolvido após explicação pelo vídeo: https://www.youtube.com/watch?v=ZYO43bi0IXY (BubbleSorte - demonstração do método da bolha)
+// Ajuda tbm do colega Ryan
+  let checarTroca = true
+  while (checarTroca === true) {
+    checarTroca = false
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] > array[i + 1]) {
+        let tempVar = array[i]
+        array[i] = array[i + 1]
+        array[i + 1] = tempVar
+        checarTroca = true
+      }
+    }
+  }
+ // console.log(array) // para verificar a saída
+  return array
 }
 
 // EXERCÍCIO 12
