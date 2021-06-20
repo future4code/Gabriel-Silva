@@ -180,14 +180,23 @@ function filmeFavorito() {
 function imprimeChamada() {
     // "Venha assistir ao filme NOME_DO_FILME, de ANO, dirigido por DIRECAO e estrelado por ELENCO."
     //Método join(): adciona caractéries ao ser chamado.
-    const chamandoFilmeFavorito = filmeFavorito()
-    return `Venha assistir ao filme ${chamandoFilmeFavorito.nome}, de ${chamandoFilmeFavorito.ano}, dirigido por ${chamandoFilmeFavorito.diretor} e estrelado por ${chamandoFilmeFavorito.atores.join(", ")}.`
-    
-  }
+
+    const filmeFavorito = {
+      nome: "O Diabo Veste Prada",
+      ano: 2006,
+      diretor: "David Frankel",
+      atores: ["Meryl Streep" , "Anne Hathaway", "Emily Blunt", "Stanley Tucci"]
+    }
+    return `Venha assistir ao filme ${filmeFavorito.nome}, de ${filmeFavorito.ano}, dirigido por ${filmeFavorito.diretor} e estrelado por ${filmeFavorito.atores.join(", ")}.`
+}
 
 // EXERCÍCIO 14
 function criaRetangulo(lado1, lado2) {
-
+  
+  const perimetro = 2*(lado1+lado2)
+  const area = (lado1*lado2)
+  
+  return {"largura":lado1,"altura":lado2,"perimetro":perimetro,"area":area}
 }
 
 // EXERCÍCIO 15
