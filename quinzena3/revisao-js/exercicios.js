@@ -178,10 +178,12 @@ function filmeFavorito() {
 
 // EXERCÍCIO 13
 function imprimeChamada() {
-  // "Venha assistir ao filme NOME_DO_FILME, de ANO, dirigido por DIRECAO e estrelado por ELENCO."
-  const filmeFavorito = filmeFavorito()
-  return `Venha assistir ao filme ${filmeFavorito.nome}, de ${filmeFavoritoDoAstrodev.ano}, dirigido por ${filmeFavorito.diretor} e estrelado por ${filmeFavorito.atores[0], filmeFavorito.atores[1], filmeFavorito.atores[3]}.`
-}
+    // "Venha assistir ao filme NOME_DO_FILME, de ANO, dirigido por DIRECAO e estrelado por ELENCO."
+    //Método join(): adciona caractéries ao ser chamado.
+    const chamandoFilmeFavorito = filmeFavorito()
+    return `Venha assistir ao filme ${chamandoFilmeFavorito.nome}, de ${chamandoFilmeFavorito.ano}, dirigido por ${chamandoFilmeFavorito.diretor} e estrelado por ${chamandoFilmeFavorito.atores.join(", ")}.`
+    
+  }
 
 // EXERCÍCIO 14
 function criaRetangulo(lado1, lado2) {
