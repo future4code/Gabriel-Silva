@@ -251,6 +251,7 @@ function verificaParidade(array) {
       return `${inputArray} é ímpar`
     }
   })
+  
   return novoArray
 }
 
