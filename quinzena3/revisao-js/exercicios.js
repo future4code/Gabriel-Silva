@@ -250,14 +250,18 @@ function verificaParidade(array) {
     } else {
       return `${inputArray} é ímpar`
     }
-  })
-  
+  })  
   return novoArray
 }
 
 // EXERCÍCIO 18A
 function retornaPessoasAutorizadas(pessoas) {
-
+  const autorizaPessoas = pessoas.filter((inputPessoas)=>{
+    if(inputPessoas.idade > 14 && inputPessoas.idade < 60 && inputPessoas.altura > 1.5){
+      return inputPessoas
+    }
+  })
+  return autorizaPessoas
 }
 
 // EXERCÍCIO 18B
