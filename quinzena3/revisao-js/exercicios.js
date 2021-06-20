@@ -47,18 +47,6 @@ function retornaQuantidadeElementos(array) {
 
 // EXERCÍCIO 06
 function retornaExpressoesBooleanas() {
-
-// a) `booleano1 && booleano2 && !booleano4` 
-  //    false pois há dois falses - operador && basta apenas um false
-// b) `(booleano1 && booleano2) || !booleano3` 
-  //    false pois há apenas um false - o booleano3 está em negação, tornando assim a compareção em false
-// c)  `(booleano2 || booleano3) && (booleano4 || booleano1)` 
-  //    true
-// d) `!(booleano2 && booleano3) || !(booleano1 && booleano3)` 
-  //    true 
-// e) `!(booleano1) && !(booleano3) || (!booleano4 && booleano3 && booleano3)`
-  //    true 
-
 const booleano1 = true // V
 const booleano2 = false // F
 const booleano3 = !booleano2 // V 
@@ -124,6 +112,8 @@ function comparaDoisNumeros(num1, num2) {
 
 // EXERCÍCIO 10
 function segundoMaiorEMenor(array) {
+  //passou apenas no 1º testes
+
   let novoArray = []
   let maior = -Infinity
   let menor = Infinity
@@ -278,7 +268,7 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 // EXERCÍCIO 19A
 function ordenaPorNome(consultasNome) {
   //Exercício resolvido após explicação do Bruno durante o plantão 19/06/2021
-  //
+  // Trecho do código https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
   const newArray = consultasNome.sort(function (a, b) {
 
     if (a.nome > b.nome) {
@@ -294,12 +284,24 @@ return newArray
 }
 
 // EXERCÍCIO 19B
+//Utilizei o mesmo código do exercício 19A e passou apenas no 1º teste
+
 function ordenaPorData(consultasData) {
-
-  
-
+    const newArray = consultasData.sort((a, b) => {
+       
+      if (a.dataDaConsulta > b.dataDaConsulta){
+        return -1
+      }
+      if (a.dataDaConsulta < b.dataDaConsulta){
+         return 1
+      }else 
+        return 0
+     });
+return newArray
 }
 
+
+  
 // EXERCÍCIO 20
 function calculaSaldo(contas) {
 
