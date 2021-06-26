@@ -4,49 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
     <title>Adicionar Produto</title>
   </head>
   <body>
-    <div>
-      <p>ShoppingTrem</p>
-    </div>
 
-    <div>
-      <a href="./index.html">Página Inicial</a>
-      <a href="./ctrl-estoque.html">Controle de Estoque</a>
-      <a href="./add-produto.html">Adicionar Produto</a>
-      <a href="./funcionarios.html">Funcionários</a>
-    </div>
+    <header id="header">
+      <a id="logo" href="./index.html"><strong>ShoppingTrem</strong></a>
+     <nav id="nav">
+        <ul id="menu">
+          <li><a href="./index.html">Página Inicial</a></li>
+          <br>
+          <li><a href="./ctrl-estoque.html">Controle de Estoque</a></li>
+          <br>
+          <li><a href="./add-produto.html">Adicionar Produto</a></li>
+          <br>
+          <li><a href="./funcionarios.html">Funcionários</a></a>
+          </ul>
+      </nav>    
+    </header>
 
-    <h2>Adicionar Produto</h2>
+    <h2 id="h2-add">Adicionar Produto</h2>
+    
+<section id="section-add">
     <form action="">
       <div>
         <label for="link-foto">Link para foto: </label>
         <input type="url" id="link-foto" name="link-foto" />
       </div>
-
+<br>
       <div>
         <label for="descricao">Descrição do produto: </label>
         <!-- Adicione o id apropriado para o input abaixo -->
         <input type="text" id="descricao" name="descrição" />
       </div>
-
+<br>
       <div>
         <label for="preco">Preço (em R$): </label>
         <!-- Adicione o id apropriado e o type para receber números abaixo -->
         <input type="" id="preco" name="preço" />
       </div>
-
+<br>
       <div>
         <!-- Preencha as propriedades necessárias para os elementos abaixo -->
         <label for="total">Quantidade disponível: </label>
         <input type="text" id="total" name="Quantidade" />
       </div>
-
+<br>
       <div class="form-add">
         <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
-        <button type="submit">Adicionar</button>
+        <button id="btn" type="submit">Adicionar</button>
       </div>
     </form>
+  </section>
+
+    <footer id="footer">
+      <p>Siga-nos nas redes sociais!</p>
+        <div >
+          <img class="imagem" src="https://image.flaticon.com/icons/png/512/174/174848.png" alt="logotipo do facebook"/>
+          <img class="imagem" src="https://image.flaticon.com/icons/png/512/2111/2111463.png" alt="logotipo do instagram"/>
+          <img class="imagem" src="https://image.flaticon.com/icons/png/512/145/145812.png" alt="logotipo do twiter"/>
+        </div>
+      </footer>
+
   </body>
 </html>

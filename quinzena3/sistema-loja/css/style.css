@@ -1,0 +1,177 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  background: #e9ecef;
+}
+
+header {
+  background-color: a5a58d;
+}
+
+a {
+  color: #495057;
+  text-decoration: none;
+}
+
+a:hover {
+  background: #ced4da;
+}
+
+#logo {
+  font-size: 30px;
+  background: none;
+  color: #c1121f;
+  font-family: cursive;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ced4da;
+  font-weight: bold;
+  margin: 10px;
+  padding: 10px;
+  padding-right: 50px;
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+#menu a {
+  display: block;
+}
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ced4da;
+  font-weight: bold;
+  margin: 10px;
+  padding: 10px;
+
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 98%;
+}
+
+p {
+  text-align: center;
+  font-size: 24px;
+}
+.frase-imp {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 42px;
+}
+
+#imagem {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#footer .imagem {
+  max-width: 50x;
+  max-height: 50px;
+}
+
+/* Tela ctrl-estoque*/
+
+table {
+  background: #dee2e6;
+  font-size: 18px;
+  border: 1px solid black;
+}
+
+td {
+  background: #dee2e6;
+  width: 10%;
+  text-align: center;
+  border: 1px solid #c8cacc;
+}
+
+td img {
+  width: 150px;
+}
+
+#h2-estoque {
+  color: #343a40;
+  text-align: center;
+  font-size: 32px;
+}
+
+/*Tela add-produto*/
+
+#h2-add {
+  color: #343a40;
+  text-align: center;
+  font-size: 32px;
+}
+
+#section-add {
+  display: block;
+  font-size: 24px;
+  position: absolute;
+}
+
+#btn {
+  font-weight: bold;
+  padding: 20px;
+  float: right;
+  color: #343a40;
+  margin-left: 20px;
+  border-radius: 10px 0 10px 0;
+  font-size: 18px;
+}
+
+input {
+  float: right;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+/* funcionarios*/
+
+#h2-funcionarios {
+  color: #343a40;
+  text-align: center;
+  font-size: 32px;
+}
+
+#section-funcionarios {
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 50px;
+  padding: 50px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+#section-funcionarios img {
+  width: 50%;
+  border: 2px solid #343a40;
+  border-radius: 30px;
+}
+
+/*Histórico de vendas*/
+
+#hist-vendas {
+  border: 1px solid #fff;
+  box-shadow: 2px 2px 3px 0px rgba(114, 112, 112, 0.5);
+  font-family: monospace;
+  font-size: 18px;
+
+  background-color: rgb(236, 234, 95);
+  width: 400px;
+  height: 540px;
+  color: black;
+  padding: 20px 0 0 30px;
+}
