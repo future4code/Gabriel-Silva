@@ -65,9 +65,10 @@ div > p:first-child {
   **/
 
 #container-de-descricao {
+  max-height: 40vh;
   background-color: #2274a5;
   color: white;
-  padding: 2rem;
+  padding: 6rem;
 }
 
 #container-de-descricao > ol {
@@ -77,11 +78,12 @@ div > p:first-child {
 #container-para-comprar {
   background-color: #e7eb90;
   display: grid;
+  max-height: 50vh;
 }
 
 #container-para-comprar > p {
   color: #c44f00;
-  padding: 100px 0;
+  padding: 10px 0;
   font-size: 60px;
 }
 
@@ -96,10 +98,13 @@ div:last-child {
   text-align: center;
 }
 
-table {
-  width: 60%;
+table,
+td {
+  width: 50%;
   text-align: center;
   margin: 0 auto;
+  background: lightgrey;
+  border: 1px solid rgb(192, 186, 186);
 }
 
 table img {
@@ -113,6 +118,7 @@ td button {
   border-radius: 5px;
   color: black;
   border: none;
+  margin: 1rem;
 }
 
 td button:hover {
@@ -130,10 +136,10 @@ td button:active {
 }
 
 #back-button {
-  background-color: white;
+  background-color: #fadf63;
   width: 100px;
   height: 20px;
-  border: 1px solid black;
+  border: none;
   border-radius: 5px;
   font-size: 10px;
   color: black;
@@ -142,5 +148,9 @@ td button:active {
 }
 
 #back-button:hover {
-  background-color: #ddd7c3;
+  background-color: #f1cf37;
+}
+
+#div-btn-voltar {
+  padding-top: 80px;
 }
