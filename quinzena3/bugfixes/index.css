@@ -34,7 +34,11 @@ div > p:first-child {
 }
 
 div img {
-  background: black;
+  width: 2rem;
+}
+
+div img:hover {
+  background-color: #e4e4e4;
 }
 
 .botao-amarelo {
