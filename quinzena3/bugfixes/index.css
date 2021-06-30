@@ -42,10 +42,11 @@ div > p:first-child {
   border-radius: 5px;
   font-size: 20px;
   color: white;
+  border: none;
 }
 
 .botao-amarelo:hover {
-  background-color: #c44f00;
+  background-color: #f39212;
 }
 
 .container {
@@ -75,6 +76,7 @@ div > p:first-child {
 
 #container-para-comprar {
   background-color: #e7eb90;
+  display: grid;
 }
 
 #container-para-comprar > p {
