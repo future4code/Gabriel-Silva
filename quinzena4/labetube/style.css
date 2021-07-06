@@ -17,10 +17,10 @@
 }
 
 .icone {
-  height: 48px;
-  width: 28px;
+  height: 24px;
+  width: 18px;
   padding-bottom: 4px;
-  margin-right: 10px;
+  margin-left: 5px;
 }
 
 header {
@@ -108,4 +108,9 @@ footer {
 
 footer img {
   width: 200px;
+}
+
+#icone-footer {
+  height: 59px;
+  width: 39px;
 }
