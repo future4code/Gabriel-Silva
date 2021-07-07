@@ -12,8 +12,10 @@
   <body>
     <header>
       <div class="icone-e-texto">
-        <img class="icone" src="imagens/icon_labenu.png" />
-        <h2>Labe<span>Tube</span></h2>
+        <a href="index.html">
+          <h2>Labe<span>Tube</span></h2>
+          <img class="icone" src="imagens/play-icon.png" />
+        </a>
       </div>
 
       <div id="buscar-videos">
@@ -24,7 +26,15 @@
 
     <!-- Conteúdo da página -->
 
-    <h2>inserir conteudo</h2>
+    <main>
+      <div id="play-video">
+        <video
+          src="https://storage.googleapis.com/future-apis.appspot.com/1.mp4"
+          autoplay="autoplay"
+          controls="controls"
+        ></video>
+      </div>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -33,7 +43,7 @@
       </div>
 
       <div class="icone-e-texto">
-        <img class="icone" src="imagens/icon_labenu.png" />
+        <img id="icone-footer" src="imagens/icon_labenu.png" />
         <h2>Labe<span>Tube</span></h2>
       </div>
     </footer>
