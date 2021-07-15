@@ -13,35 +13,37 @@ function App() {
           imagem="https://github.com/gabazevdo.png"
           nome="Gabriel Azevedo"
           descricao="Oi, eu sou o Gabriel, e tem 3 décadas que estou vivo. 
-          Casado e papai de uma princesinha linda! 
           Estou estudando React na Labenu. E faço parte da melhor turma: Johnson."
         />
 
-        <ImagemButton
+        {/* <ImagemButton
           imagem="https://image.flaticon.com/icons/png/512/117/117472.png"
           texto="Ver mais"
-        />
+        /> */}
       </div>
+      {/* Card com link para o github */}
+      <div className="links-home">
+        <div className="page-section-container">
+          <CardPequeno
+            imagem="https://image.flaticon.com/icons/png/512/2111/2111432.png"
+            link="gabazevdo"
+          />
+        </div>
+        {/* Card com link para o e-mail */}
+        <div className="page-section-container">
+          <CardPequeno
+            imagem="https://image.flaticon.com/icons/png/512/747/747314.png"
+            email="gbldja@gmail.com"
+          />
+        </div>
 
-      <div className="page-section-container">
-        <CardPequeno
-          imagem="https://image.flaticon.com/icons/png/512/2111/2111432.png"
-          link="gabazevdo"
-        />
-      </div>
-
-      <div className="page-section-container">
-        <CardPequeno
-          imagem="https://image.flaticon.com/icons/png/512/747/747314.png"
-          email="gbldja@gmail.com"
-        />
-      </div>
-
-      <div className="page-section-container">
-        <CardPequeno
-          imagem="https://image.flaticon.com/icons/png/512/711/711170.png"
-          local="Itapevi/SP"
-        />
+        {/* Card com link para o endereço */}
+        <div className="page-section-container">
+          <CardPequeno
+            imagem="https://image.flaticon.com/icons/png/512/711/711170.png"
+            local="Itapevi/SP"
+          />
+        </div>
       </div>
 
       <div className="page-section-container">
@@ -76,17 +78,21 @@ function App() {
         />
       </div>
 
-        <h2>Minhas redes sociais</h2>
+      <h2>Minhas redes </h2>
       <div className="page-section-container redesSociais">
         <ImagemButton
           imagem="https://image.flaticon.com/icons/png/512/145/145802.png"
-          texto="Facebook"
+          linkFacebook="Facebook"
         />
 
         <ImagemButton
-          
           imagem="https://image.flaticon.com/icons/png/512/2111/2111463.png"
-          texto="Instagram"
+          linkInstagram="Instagram"
+        />
+
+        <ImagemButton
+          imagem="https://image.flaticon.com/icons/png/512/145/145807.png"
+          linkLinkedin="Linkedin"
         />
       </div>
     </div>
