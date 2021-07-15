@@ -1,0 +1,21 @@
+
+
+.smallcard-container{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.smallcard-container img{
+    height: 1.5em;
+}
+
+.smallcard-container p a{
+    display: flex;
+    padding-left:10px ;
+    text-decoration: none;
+    cursor: pointer;
+
+}
