@@ -1,0 +1,33 @@
+.image-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  
+  box-shadow: 1px 0 8px #ecb69d;
+  border-radius: 0 15px;
+  width: 200px;
+  padding: 15px 15px;
+  margin: 10px 10px;
+}
+
+.image-button-container > img {
+  width: 30px;
+  margin-right: 10px;
+}
+.image-button-container a {
+  text-decoration: dashed;
+}
+
+.image-button-container:hover {
+  background-color: #d9d9d9;
+  color: #353535;
+  cursor: pointer;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 880px) {
+  .image-button-container {
+    width: 80vw;
+  }
+}

@@ -1,0 +1,35 @@
+.smallcard-container {
+  display: flex;
+  align-items: center;
+ 
+  box-shadow: 1px 0 8px #ecb69d;
+  padding: 10px;
+  border-radius: 50px;
+  width: 15vw;
+}
+
+.smallcard-container img {
+  height: 1.5em;
+}
+
+.smallcard-container p a {
+  display: flex;
+  padding-left: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .page-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .smallcard-container {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+  }
+}
