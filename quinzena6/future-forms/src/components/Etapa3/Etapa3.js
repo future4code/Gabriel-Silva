@@ -11,7 +11,6 @@ const Secao = styled.div`
   border-radius: 15px;
   margin-top: 50px;
 
-
   width: 50vw;
   height: 80vh;
 
@@ -19,7 +18,7 @@ const Secao = styled.div`
     margin: 20px 0;
   }
 
-  li {
+  p {
     margin-top: 20px;
   }
 
@@ -35,6 +34,7 @@ const Secao = styled.div`
 
   select {
     width: 200px;
+    margin-top:10px;
     border: none;
     padding: 4px;
     border-radius: 5px;
@@ -42,30 +42,30 @@ const Secao = styled.div`
     outline: 0;
   }
 
-  button {
-    margin-top: 10vh;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-
-    box-shadow: 1px 2px 20px rgb(0, 0, 0, 0.2);
-
-    :hover {
-      background-color: darkgreen;
-      color: white;
-    }
-  }
 `;
 
 const LinhaDivisao = styled.div`
-  
   width: 100%;
   height: 1px;
   margin-bottom: 20px;
-  box-shadow: 0px 1px 2px lightsalmon ;
+  box-shadow: 0px 1px 2px lightsalmon;
+`;
 
-`
+const Button = styled.button`
+  margin-top: 10vh;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  box-shadow: 1px 2px 20px rgb(0, 0, 0, 0.2);
+
+  :hover {
+    background-color: darkgreen;
+    color: white;
+  }
+`;
+
 /*=================== Lógica =======================*/
 
 class Etapa3 extends React.Component {
@@ -76,25 +76,18 @@ class Etapa3 extends React.Component {
       <>
         <Secao>
           <h1>Etapa 3 - INFORMAÇÕES GERAIS DE ENSINO</h1>
-          <LinhaDivisao/>
-          <ol>
-            <li>
-              Porque não terminou a graduação?
-              <br />
-              <input></input>
-            </li>
+          <LinhaDivisao />
 
-            <li>
-              Fez algum curso complementar?
-              
-            </li>
-            <select>
-              {opcoes.map((opcoes) => (
-                <option value={opcoes}>{opcoes}</option>
-              ))}
-            </select>
-          </ol>
-          <button>Próxima Página</button>
+          <p>5. Porque não terminou a graduação?</p>
+          <input></input>
+          <p>6. Fez algum curso complementar?</p>
+
+          <select>
+            {opcoes.map((opcoes) => (
+              <option value={opcoes}>{opcoes}</option>
+            ))}
+          </select>
+          <Button>Próxima Página</Button>
         </Secao>
       </>
     );

@@ -18,7 +18,7 @@ const Secao = styled.div`
     margin: 20px 0;
   }
 
-  li {
+  p {
     margin-top: 20px;
   }
 
@@ -31,30 +31,6 @@ const Secao = styled.div`
     box-shadow: 1px 2px 20px rgb(0, 0, 0, 0.2);
     outline: 0;
   }
-
-  select {
-    width: 200px;
-    border: none;
-    padding: 4px;
-    border-radius: 5px;
-    box-shadow: 1px 2px 20px rgb(0, 0, 0, 0.2);
-    outline: 0;
-  }
-
-  button {
-    margin-top: 10vh;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-
-    box-shadow: 1px 2px 20px rgb(0, 0, 0, 0.2);
-
-    :hover {
-      background-color: darkgreen;
-      color: white;
-    }
-  }
 `;
 
 const LinhaDivisao = styled.div`
@@ -62,6 +38,21 @@ const LinhaDivisao = styled.div`
   height: 1px;
   margin-bottom: 20px;
   box-shadow: 0px 1px 2px lightsalmon;
+`;
+
+const Button = styled.button`
+  margin-top: 10vh;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  box-shadow: 1px 2px 20px rgb(0, 0, 0, 0.2);
+
+  :hover {
+    background-color: darkgreen;
+    color: white;
+  }
 `;
 
 /*=================== Lógica =======================*/
@@ -73,19 +64,12 @@ class Etapa2 extends React.Component {
         <Secao>
           <h1>Etapa 2 - INFORMAÇÕES DO ENSINO SUPERIOR</h1>
           <LinhaDivisao />
-          <ol>
-            <li>
-              Qual seu curso?
-              <br />
-              <input></input>
-            </li>
-            <li>
-              Qual a Faculdade?
-              <br />
-              <input></input>
-            </li>
-          </ol>
-          <button>Próxima Página</button>
+          <p>5. Qual seu curso?</p>
+          <input></input>
+          <p>6. Qual a Faculdade?</p>
+          <input></input>
+
+          <Button>Próxima Página</Button>
         </Secao>
       </>
     );

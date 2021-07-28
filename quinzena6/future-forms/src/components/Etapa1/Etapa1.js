@@ -11,7 +11,6 @@ const Secao = styled.div`
   border-radius: 15px;
   margin-top: 50px;
 
-
   width: 50vw;
   height: 80vh;
 
@@ -19,7 +18,7 @@ const Secao = styled.div`
     margin: 20px 0;
   }
 
-  li {
+  p {
     margin-top: 20px;
   }
 
@@ -34,6 +33,7 @@ const Secao = styled.div`
   }
 
   select {
+    margin-top:10px;
     width: 200px;
     border: none;
     padding: 4px;
@@ -42,30 +42,32 @@ const Secao = styled.div`
     outline: 0;
   }
 
-  button {
-    margin-top: 10vh;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 
-    box-shadow: 1px 2px 20px rgb(0, 0, 0, 0.2);
-
-    :hover {
-      background-color: darkgreen;
-      color: white;
-    }
-  }
 `;
 
 const LinhaDivisao = styled.div`
-  
   width: 100%;
   height: 1px;
   margin-bottom: 20px;
-  box-shadow: 0px 1px 2px lightsalmon ;
+  box-shadow: 0px 1px 2px lightsalmon;
+`;
 
-`
+
+const Button = styled.button`
+  margin-top: 10vh;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  box-shadow: 1px 2px 20px rgb(0, 0, 0, 0.2);
+
+  :hover {
+    background-color: darkgreen;
+    color: white;
+  }
+`;
+
 
 /*=================== Lógica =======================*/
 
@@ -79,41 +81,24 @@ class Etapa1 extends React.Component {
       "Ensino Superior Completo",
     ];
 
-
-
-
     return (
       <>
         <Secao>
           <h1>Etapa 1 - Dados Gerais</h1>
-          <LinhaDivisao/>
-          <ol>
-            <li>
-              Nome
-              <br />
-              <input></input>
-            </li>
-            <li>
-              Idade
-              <br />
-              <input></input>
-            </li>
-            <li>
-              E-mail
-              <br />
-              <input></input>
-            </li>
-            <li>
-              Qual o seu nome?
-              <br />
-              <select>
-                {opcoes.map((opcoes) => (
-                  <option value={opcoes}>{opcoes}</option>
-                ))}
-              </select>
-            </li>
-          </ol>
-          <button>Próxima Página</button>
+          <LinhaDivisao />
+          <p>1. Nome</p>
+          <input></input>
+          <p>2. Idade</p>
+          <input></input>
+          <p>3. E-mail</p>
+          <input></input>
+          <p>4. Escolaridade</p>
+          <select>
+            {opcoes.map((opcoes) => (
+              <option value={opcoes}>{opcoes}</option>
+            ))}
+          </select>
+          <Button>Próxima Página</Button>
         </Secao>
       </>
     );
