@@ -69,7 +69,7 @@ class Etapa2 extends React.Component {
           <p>6. Qual a Faculdade?</p>
           <input></input>
 
-          <Button>Próxima Página</Button>
+          <Button onClick={this.props.onClick}>Próxima Página</Button>
         </Secao>
       </>
     );

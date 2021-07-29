@@ -87,7 +87,7 @@ class Etapa3 extends React.Component {
               <option value={opcoes}>{opcoes}</option>
             ))}
           </select>
-          <Button>Próxima Página</Button>
+          <Button onClick={this.props.onClick}>Próxima Página</Button>
         </Secao>
       </>
     );

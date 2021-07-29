@@ -9,28 +9,28 @@ import Etapa3 from "./components/Etapa3/Etapa3";
 import Etapa4 from "./components/Etapa4/Etapa4";
 
 class App extends React.Component {
-  state = {
-    etapa: "1",
-  };
+    state = {
+      etapa: 1,
+    };
+
 
   renderizaEtapa = () => {
     switch (this.state.etapa) {
-      case "1":
-        return <Etapa1 />;
-        break;
-      case "2":
-        return <Etapa2 />;
-        break;
-      case "3":
-        return <Etapa3 />;
-        break;
-      case "4":
+      case 1:
+        return <Etapa1 onClick={this.proximaEtapa} />;
+      case 2:
+        return <Etapa2 onClick={this.proximaEtapa}/>;
+      case 3:
+        return <Etapa3 onClick={this.proximaEtapa} />;
+      case 4:
         return <Etapa4 />;
-        break;
       default:
         return <Etapa4 />;
-        break;
     }
+  };
+
+  proximaEtapa = () => {
+    this.setState({ etapa: this.state.etapa + 1});
   };
 
   render() {
@@ -38,6 +38,7 @@ class App extends React.Component {
       <>
         <GlobalStyle />
         {this.renderizaEtapa()}
+        
       </>
     );
   }

@@ -72,6 +72,13 @@ const Button = styled.button`
 /*=================== Lógica =======================*/
 
 class Etapa1 extends React.Component {
+state={
+  nome:'',
+  idade:'',
+  email:'', 
+  escolaridade:'',
+}
+
   render() {
     const opcoes = [
       "Selecione...",
@@ -98,7 +105,7 @@ class Etapa1 extends React.Component {
               <option value={opcoes}>{opcoes}</option>
             ))}
           </select>
-          <Button>Próxima Página</Button>
+          <Button onClick={this.props.onClick}>Próxima Página</Button>
         </Secao>
       </>
     );
