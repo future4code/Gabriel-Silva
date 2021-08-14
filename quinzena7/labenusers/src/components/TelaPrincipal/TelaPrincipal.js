@@ -3,7 +3,7 @@ import {
   Body,
   LateralDireita,
   LateralEsquerda,
-  LogoLogin,
+  FotoUsuario,
   Titulo,
   Divinputs,
   Input,
@@ -11,39 +11,65 @@ import {
 } from "./StyledTelaPrincipal";
 import TelaUsuarios from "../TelaUsuario/TelaUsuarios";
 
+export default class TelaPrincipal extends React.Component {
+  state = {
+    novaTela: false,
 
+    nome: "",
+    email: "",
+  };
 
+  TrocarPagina = () => {
+    this.setState({ novaTela: true });
+  };
 
+  inputNome = (event) => {
+    this.setState({ nome: event.target.value });
+  };
+  inputEmail = (event) => {
+    this.setState({ email: event.target.value });
+  };
 
-export default class TelaPrincipal extends React.Component{
-  
-  TrocarPagina = () =>{
-    return <TelaUsuarios/>
-    alert("trocoou")
-  }
+  novoUsuario = () => {
+    console.log("nome ", this.state.nome, "email ", this.state.email);
 
+  };
 
-  render(){
-  return (
-    <Body>
-      <LateralDireita />
+  render() {
+    if (this.state.novaTela) return <TelaUsuarios usuario={{nome: this.state.nome, email:this.state.email}}/>;
+
+    return (
+      <Body>
+        <LateralDireita />
         <LateralEsquerda>
-        <Titulo> LabenUserss</Titulo>
+          <Titulo> LabenUsers</Titulo>
 
-        <LogoLogin />
+          <FotoUsuario />
 
-        <Divinputs>
-          <Input type="text" placeholder="Insira seu nome" required></Input>
-          <Input type="email" placeholder="Insira seu nome" required></Input>
-          <Button>Enviar</Button>
-        </Divinputs>
+          <Divinputs>
+            <Input
+              type="text"
+              placeholder="Nome"
+              required
+              onChange={this.inputNome}
+              value={this.state.nome}
+            ></Input>
 
-        {/* Ir para a tela de usuários cadastrados */}
-        <Button onClick={this.TrocarPagina}>Lista de usuários</Button>
-        
-      </LateralEsquerda>
-    </Body>
-  );
+            <Input
+              onChange={this.inputEmail}
+              value={this.state.email}
+              type="email"
+              placeholder="Email"
+              require
+            ></Input>
+
+            <Button onClick={this.novoUsuario}>Enviar</Button>
+          </Divinputs>
+
+          {/* Ir para a tela de usuários cadastrados */}
+          <Button onClick={this.TrocarPagina}>Lista de usuários</Button>
+        </LateralEsquerda>
+      </Body>
+    );
   }
-};
-
+}

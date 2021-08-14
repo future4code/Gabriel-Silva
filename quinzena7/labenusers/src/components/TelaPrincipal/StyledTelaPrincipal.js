@@ -24,7 +24,7 @@ export const Titulo = styled.h1`
   color: #444;
 `;
 
-export const LogoLogin = styled.div`
+export const FotoUsuario = styled.div`
   background-color: #e5e5e5;
   height: 100px;
   width: 100px;
@@ -35,7 +35,7 @@ export const LogoLogin = styled.div`
   background-size: cover;
 `;
 
-export const Divinputs = styled.form`
+export const Divinputs = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,7 +57,7 @@ export const Input = styled.input`
 
   :focus {
     background-color: #f4f4f4 transparent;
-    border-radius: 0;
+    border-radius: 8px 8px 0 0;
 
     border-bottom: 1px solid #444;
 
