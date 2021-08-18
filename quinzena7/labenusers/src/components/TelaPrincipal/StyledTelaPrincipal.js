@@ -22,6 +22,10 @@ export const LateralEsquerda = styled.div`
 export const Titulo = styled.h1`
   margin-top: 20%;
   color: #444;
+
+  span{
+    color: grey;
+  }
 `;
 
 export const FotoUsuario = styled.div`

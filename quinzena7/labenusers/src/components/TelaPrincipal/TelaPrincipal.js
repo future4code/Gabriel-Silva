@@ -10,6 +10,8 @@ import {
   Button,
 } from "./StyledTelaPrincipal";
 import TelaUsuarios from "../TelaUsuario/TelaUsuarios";
+import axios from "axios";
+import { ThemeProvider } from "styled-components";
 
 export default class TelaPrincipal extends React.Component {
   state = {
@@ -31,7 +33,24 @@ export default class TelaPrincipal extends React.Component {
   };
 
   novoUsuario = () => {
+      const url="https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users"
+      const body = {
+        name: this.state.nome,
+        email:this.state.email,
+      }
+      axios.post(url, body,{
+        headers: {
+          Authorization:"gabriel-azevedo-johnson"
+        }
+      })
+      .then(() =>{ 
+        this.setState({nome:"", email:""})
+        alert("Usuário cadastrado com sucesso!")
+      })
+      .catch(() =>{ 
+        alert("Não foi possível cadastrar usuário")
 
+      })
   };
 
   render() {
@@ -41,7 +60,7 @@ export default class TelaPrincipal extends React.Component {
       <Body>
         <LateralDireita />
         <LateralEsquerda>
-          <Titulo> LabenUsers</Titulo>
+          <Titulo> Laben<span>Users</span></Titulo>
 
           <FotoUsuario />
 
@@ -49,20 +68,22 @@ export default class TelaPrincipal extends React.Component {
             <Input
               type="text"
               placeholder="Nome"
-              required
-              onChange={this.inputNome}
               value={this.state.nome}
+              onChange={this.inputNome}
+
+              required
             ></Input>
 
             <Input
-              onChange={this.inputEmail}
-              value={this.state.email}
               type="email"
               placeholder="Email"
-              require
+              value={this.state.email}
+              onChange={this.inputEmail}
+              
+              required
             ></Input>
 
-            <Button onClick={this.novoUsuario}>Enviar</Button>
+            <Button onClick={this.novoUsuario}>Cadastrar</Button>
           </Divinputs>
 
           {/* Ir para a tela de usuários cadastrados */}
