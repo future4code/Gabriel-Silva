@@ -31,7 +31,6 @@ export default class TelaPrincipal extends React.Component {
   };
 
   novoUsuario = () => {
-    console.log("nome ", this.state.nome, "email ", this.state.email);
 
   };
 
