@@ -51,7 +51,7 @@ export default class TelaUsuarios extends React.Component {
     })
     .then(()=>{
       this.trazerUsuarios()
-      alert("Deseja realmente deletar o usuário?")
+      window.confirm("Deseja realmente deletar o usuário?")
     })
     .catch(()=>{
       alert("Não foi possível deletar usuário, tente novamente")
