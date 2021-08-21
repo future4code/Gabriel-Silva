@@ -1,16 +1,17 @@
 import React from "react";
 import PaginaAplicacao from "../PaginaAplicacao/PaginaAplicacao";
-
 import {
   Header,
-  Logo,
   Button,
   Body,
-  TextoCentral,
-  Container,
-  Button2,
-  Footer
+  Video,
+  Footer,
 } from "../PaginaApresentacao/StyledPaginaApresentacao";
+import { FaHeadphonesAlt } from "react-icons/fa";
+
+import VideoFestival from '../../assets/VideoFestival.mp4'
+
+
 
 export default class PaginaApresentacao extends React.Component {
   state = {
@@ -25,20 +26,21 @@ export default class PaginaApresentacao extends React.Component {
     if (this.state.trocarPagina) return <PaginaAplicacao />;
 
     return (
-      <div>
+      <>
         <Body>
           <Header>
-            <Logo>Labef<span>y</span></Logo>
+            <h2>
+              <FaHeadphonesAlt size={50} color={"#1e824c"} />
+              labefy
+            </h2>
             <Button onClick={this.TrocarPagina}>ENTRAR</Button>
           </Header>
-          <Container>
-            <TextoCentral>Ouvir música, muda tudo!
-            </TextoCentral>
-            <Button2 onClick={this.TrocarPagina}>É free!</Button2>
-          </Container>
+
         </Body>
-        <Footer>Aqui é o Footer</Footer>
-      </div>
+        <Footer>
+          <FaHeadphonesAlt size={100} color={"#1e824c"} />
+        </Footer>
+      </>
     );
   }
 }
