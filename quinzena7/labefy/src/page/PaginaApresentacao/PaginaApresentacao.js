@@ -1,11 +1,6 @@
 import React from "react";
 import PaginaAplicacao from "../PaginaAplicacao/PaginaAplicacao";
-import {
-  Header,
-  Button,
-  Body,
-  Footer,
-} from "./StyledPaginaApresentacao";
+import { Header, Button, Body, Footer } from "./StyledPaginaApresentacao";
 import { FaHeadphonesAlt } from "react-icons/fa";
 
 export default class PaginaApresentacao extends React.Component {
@@ -24,16 +19,15 @@ export default class PaginaApresentacao extends React.Component {
       <>
         <Body>
           <Header>
+            <div>
+              <FaHeadphonesAlt size={50} />
             <h2>
-              <FaHeadphonesAlt size={50} color={"#2e3131"} />
-              labefy
+              Labefy
             </h2>
+            </div>
             <Button onClick={this.TrocarPagina}>ENTRAR</Button>
           </Header>
-         </Body>
-        <Footer>
-          <FaHeadphonesAlt size={100} color={"#1e824c"} />
-        </Footer>
+        </Body>
       </>
     );
   }

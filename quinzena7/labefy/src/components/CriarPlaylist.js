@@ -65,19 +65,21 @@ export default class CriarPlayList extends React.Component {
   };
 
   novaPlayList = () => {
-    this.setState({inputPlayList: ""});
-    alert("Playlist criada com sucesso!")
     const body = {
       name: this.state.inputPlayList,
     };
     axios
       .post(baseUrl, body, axiosConfig)
-      .then((res) => {
-        console.log(res);
+      .then(() => {
+        alert("Playlist criada com sucesso!")
+        this.changeInputPlayList()
       })
       .catch((err) => {
         return <Error />;
       });
+
+    this.setState({inputPlayList: ""});
+
   };
 
   TrocarPagina = () => {

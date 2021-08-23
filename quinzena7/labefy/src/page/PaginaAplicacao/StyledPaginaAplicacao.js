@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Body = styled.body`
   display: flex;
-  
+
   width: 100%;
   height: 100vh;
   background: rgb(34, 34, 34);
@@ -13,13 +13,13 @@ export const Body = styled.body`
   );
 `;
 export const DivHeader = styled.header`
-  padding: .5% 0 0 2% ;
+  padding: 0.5% 0 0 2%;
   height: 5%;
   width: 80%;
   background-color: transparent;
   position: absolute;
-  top:0;
-`
+  top: 0;
+`;
 export const ConteudoBilioteca = styled.div`
   width: 80%;
   height: 85%;
@@ -93,11 +93,10 @@ export const BotoesOpcoesNav = styled.button`
     border-right: 15px solid #1e824c;
   }
 
-  :hover:nth-child(5){
+  :hover:nth-child(5) {
     border-right: 15px solid orange;
     transition-duration: 0.1s;
     color: orange;
-    
   }
   :active {
     color: orange;
@@ -106,7 +105,7 @@ export const BotoesOpcoesNav = styled.button`
 `;
 
 export const DivPlayLists = styled.div`
-  height: 45%;
+  height: 42.2%;
   overflow-y: scroll;
   padding: 0 0 0 5%;
 
@@ -116,32 +115,51 @@ export const DivPlayLists = styled.div`
 `;
 
 export const PlaylistButton = styled.button`
-  width: 90%;
-  height:10%;
+  width: 100%;
+  height: 10%;
   margin-bottom: 1px;
   background-color: transparent;
   color: #fff;
-  border:none;
+  border: none;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
 
-  p{
+  p {
     font-weight: 600;
   }
-  :hover {
-    background-color: #222222;
-    color: #1e824c;
-    border-bottom: 1px solid orange;
-    cursor: pointer;
-  }
-`
+  button {
+    height: 1.5rem;
+    background-color: transparent;
+    border: none;
+    border-left: 1px solid #222222;
+    color: #ec644b;
 
-export const Audio = styled.div`
+    :hover {
+      cursor: pointer;
+    }
+  }
+  :hover {
+    background-color: #060606;
+    color: #1e824c;
+    border-bottom: 1px solid #323033;
+    cursor: pointer;
+    border-radius: 10px 10px 0 0;
+  }
+`;
+
+export const Audio = styled.footer`
   height: 15%;
   width: 100%;
   background-color: #222122;
   position: absolute;
   bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  audio {
+    width: 50%;
+  }
 `;
-
-

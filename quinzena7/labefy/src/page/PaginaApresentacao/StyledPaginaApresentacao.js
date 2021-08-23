@@ -18,9 +18,12 @@ export const Header = styled.header`
   padding: 0 5%;
   height: 10%;
   width: 100%;
+  color: #fff;
 
-  h2{
-    color: #2e3131;
+  div{
+    display:flex;
+    align-items: center;
+
   }
 `;
 
@@ -29,9 +32,9 @@ export const Button = styled.button`
   border-radius: 20px;
   padding: 10px;
   background-color: transparent;
-  color: #2e3131;
+  color: #fff;
   font-weight: 700;
-  border: 1px solid #2e3131;
+  border: 1px solid #fff;
   cursor: pointer;
 
   :hover{

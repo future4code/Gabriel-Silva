@@ -20,6 +20,7 @@ import {
   MdLibraryMusic,
   MdLibraryAdd,
   MdRssFeed,
+  MdDeleteForever,
 } from "react-icons/md";
 import CriarPlayList from "../../components/CriarPlaylist";
 import { axiosConfig, baseUrl } from "../../constants/constants";
@@ -36,21 +37,22 @@ export default class PaginaAplicacao extends React.Component {
   TrocarPagina = () => {
     this.setState({ telaPrincipal: true });
   };
-
   TrocarComponenteBusca = () => {
     this.setState({ componenteBusca: true });
   };
-
   EscondeComponenteBusca = () => {
     this.setState({ componenteBusca: false });
   };
-
   TrocarComponentePlaylist = () => {
     this.setState({ componenteCriarPlayList: true });
   };
   EscondeComponentePlaylist = () => {
     this.setState({ componenteCriarPlayList: false });
   };
+
+
+
+  
 
   componentDidMount = () => {
     this.pegaPlayolists();
@@ -67,6 +69,19 @@ export default class PaginaAplicacao extends React.Component {
       });
   };
 
+  DeletarPlaylist = (del) => {
+    axios
+      .delete(`${baseUrl}/${del}`, axiosConfig)
+      .then((res) => {
+        alert("Playlist deletada com sucesso!");
+        this.pegaPlayolists()
+      })
+
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   render() {
     if (this.state.telaPrincipal) return <PaginaApresentacao />;
     const playLists = this.state.playLists.map((playlist) => {
@@ -75,9 +90,32 @@ export default class PaginaAplicacao extends React.Component {
           key={playlist.id}
           changeInputPlayList={this.props.changeInputPlayList}
           name={playlist.name}
-          > <p>{(`${playlist.name}`)}</p></PlaylistButton>
+        >
+          <p>{`${playlist.name}`}</p>
+          <button onClick={() => this.DeletarPlaylist(playlist.id)}>
+            <MdDeleteForever size={20} />
+          </button>
+        </PlaylistButton>
       );
     });
+
+
+
+    const playListsBody = this.state.playLists.map((playlist) => {
+      return (
+        <PlaylistButton
+          key={playlist.id}
+          changeInputPlayList={this.props.changeInputPlayList}
+          name={playlist.name}
+        >
+          <p>{`${playlist.name}`}</p>
+          <button onClick={() => this.DeletarPlaylist(playlist.id)}>
+            <MdDeleteForever size={20} />
+          </button>
+        </PlaylistButton>
+      );
+    });
+
 
     return (
       <div>
@@ -108,6 +146,7 @@ export default class PaginaAplicacao extends React.Component {
             </BotoesNavegacao>
             <DivPlayLists>{playLists}</DivPlayLists>
           </NavegacaoLateral>
+          
           <ConteudoBilioteca>
             <DivHeader>
               {this.state.componenteBusca && (
@@ -124,8 +163,11 @@ export default class PaginaAplicacao extends React.Component {
             <Error />
           </ConteudoBilioteca>
 
-          <Audio autoplay="autoplay" controls="controls">
-            {" "}
+          <Audio>
+            <audio controls="control">
+            <source src="http://spoti4.future4.com.br/1.mp3" type="audio/mp3" />
+
+            </audio>
           </Audio>
         </Body>
       </div>
