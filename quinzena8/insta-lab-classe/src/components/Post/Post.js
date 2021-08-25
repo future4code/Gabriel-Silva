@@ -17,18 +17,15 @@ class Post extends React.Component {
     comentarios: [], // responsável por guardar a lista de comentários feitos no post
   }
 
-  onClickCurtida = () => {
-    
+  onClickCurtida = () => {    
     // verifica se, no estado, cutido é true ou false
     if (this.state.curtido) {
-
       // se for true, entra nesse caso, e o estado é modificado de acordo com esses comandos:
       this.setState({
         curtido: !this.state.curtido,
         numeroCurtidas: this.state.numeroCurtidas - 1
       })
     } else {
-
       // se for false, entra nesse caso, e o estado é modificado de acordo com esses comandos:
       this.setState({
         curtido: !this.state.curtido,

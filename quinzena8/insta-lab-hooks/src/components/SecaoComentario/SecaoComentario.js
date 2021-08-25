@@ -1,10 +1,20 @@
 import React, {useState} from 'react'
 import styled from "styled-components"
+import {FcPlus} from 'react-icons/fc'
 
 const CommentContainer = styled.div`
     display: flex;
     justify-content: center;
     padding: 5px;
+
+	button{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: transparent;
+		border:none;
+		cursor:pointer;
+	}
 `
 
 const InputComment = styled.input `
@@ -13,9 +23,11 @@ const InputComment = styled.input `
 `
 
 const SecaoComentario = (props) => {
+	const [inputValor, setInputValor] = useState("");
 
 
 	const onChangeComentario = (event) => {
+		setInputValor(event.target.value, inputValor)
 	}
 
 	return (
@@ -23,10 +35,10 @@ const SecaoComentario = (props) => {
 			<InputComment
 				className={'input-comentario'}
 				placeholder={'Comentário'}
-				value={""}
+				value={inputValor}
 				onChange={onChangeComentario}
 			/>
-			<button onClick={() => { props.enviarComentario() }} >Enviar</button>
+			<button onClick={() => { props.enviarComentario(inputValor)}}><FcPlus size={20}/></button>
 		</CommentContainer>
 	)
 }
