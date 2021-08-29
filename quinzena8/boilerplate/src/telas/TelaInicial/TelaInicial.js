@@ -114,7 +114,7 @@ function TelaInicial(props) {
             <button onClick={darMatch}>
               <MdFavorite />
             </button>
-            <button onClick={apagaHistorico}>
+            <button onClick={()=> props.mudaPagina()}>
               <MdDehaze />
             </button>
             <button onClick={apagaHistorico}>

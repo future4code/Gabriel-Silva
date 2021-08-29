@@ -59,7 +59,7 @@ export default function Header(props) {
           Astro<span>match</span>
         </Title>
         <Icon>
-          <FaHotjar size={20} />
+          <FaHotjar size={30} />
         </Icon>
       </TopoHeader>
     </>

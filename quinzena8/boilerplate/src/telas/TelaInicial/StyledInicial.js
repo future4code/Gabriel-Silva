@@ -91,6 +91,7 @@ export const ContainerBottom = styled.div`
       color: #32c28d;
 
       :hover {
+        content: 'Blaáá';
         color: #2ca87b;
         font-size: 2.2rem;
         transition: 0.3s;
