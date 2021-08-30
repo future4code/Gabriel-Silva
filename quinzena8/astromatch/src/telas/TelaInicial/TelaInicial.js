@@ -7,7 +7,12 @@ import {
   ContainerBottom,
 } from "./StyledInicial";
 import Header from "../../components/Header";
-import { MdFavorite, MdHighlightOff, MdDehaze, MdHistory } from "react-icons/md";
+import {
+  MdFavorite,
+  MdHighlightOff,
+  MdDehaze,
+  MdHistory,
+} from "react-icons/md";
 import axios from "axios";
 
 function TelaInicial(props) {
@@ -17,13 +22,11 @@ function TelaInicial(props) {
     pegaPerfil();
   }, []);
 
-
-
   const pegaPerfil = () => {
     axios
       .get(
         "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/gabriel/person"
-        )
+      )
       .then((response) => {
         if (response.data.profile === null) {
           alert(
@@ -47,11 +50,11 @@ function TelaInicial(props) {
           choice: true,
         }
       )
-      .then((response) => {
+      .then(() => {
         pegaPerfil();
       })
       .catch((err) => {
-        alert("Erro ao curtir o perfil");
+        alert("Erro ao curtir o perfil", err);
       });
   };
 
@@ -64,30 +67,12 @@ function TelaInicial(props) {
           choice: false,
         }
       )
-      .then((response) => {
+      .then(() => {
         pegaPerfil();
       })
       .catch((err) => {
-        alert("Erro ao dispensar o perfil");
+        alert("Erro ao dispensar o perfil", err);
       });
-  };
-
-  const apagaHistorico = () => {
-    const confirmacao = window.confirm(
-      "Tem certeza que deseja apagar todo o histórico de curtidas e matches ?"
-    );
-    if (confirmacao) {
-      axios
-        .put(
-          "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/gabriel/clear"
-        )
-        .then((response) => {
-          alert("Histórico apagado!");
-        })
-        .catch((err) => {
-          alert("Ocorreu um erro ao apagar histórico");
-        });
-    }
   };
 
   return (
@@ -96,16 +81,16 @@ function TelaInicial(props) {
         <Card>
           <Header />
 
-            <Photo>
-              <img src={perfil.photo}></img>
+          <Photo>
+            <img src={perfil.photo}></img>
 
-              <InfoUser>
-                    <h3>{perfil.name}, {perfil.age}</h3>
-                    <p>{perfil.bio}</p>
-              </InfoUser>
-            </Photo>
-          
-
+            <InfoUser>
+              <h3>
+                {perfil.name}, {perfil.age}
+              </h3>
+              <p>{perfil.bio}</p>
+            </InfoUser>
+          </Photo>
 
           <ContainerBottom>
             <button onClick={dispensar}>
@@ -114,11 +99,8 @@ function TelaInicial(props) {
             <button onClick={darMatch}>
               <MdFavorite />
             </button>
-            <button onClick={()=> props.mudaPagina()}>
+            <button onClick={() => props.mudaPagina()}>
               <MdDehaze />
-            </button>
-            <button onClick={apagaHistorico}>
-              <MdHistory />
             </button>
           </ContainerBottom>
         </Card>

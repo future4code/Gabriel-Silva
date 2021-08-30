@@ -17,11 +17,9 @@ export const Card = styled.section`
   background: #e0e0e0;
   height: 70%;
   width: 22%;
-
   border-radius: 20px;
-
   padding: 1%;
-  box-shadow: 10px 10px 28px #bababa, -10px -10px 28px #ffffff;
+  box-shadow: 6px 6px 14px #a8a8a8, -6px -6px 14px #ffffff;
 `;
 
 export const Photo = styled.div`
@@ -29,10 +27,8 @@ export const Photo = styled.div`
   width: 100%;
   background: #e0e0e0;
   border-radius: 20px;
-
   overflow: hidden;
   position: relative;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,7 +47,6 @@ export const InfoUser = styled.div`
   position: absolute;
   bottom: 0;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-
   color: white;
   display: flex;
   flex-direction: column;
@@ -59,98 +54,63 @@ export const InfoUser = styled.div`
   justify-content: flex-end;
   z-index: 2;
 
-  h3{
+  h3 {
     font-weight: 800;
-    
   }
   p {
     font-size: 0.85rem;
-    
   }
 `;
 
 export const ContainerBottom = styled.div`
   display: flex;
   align-self: center;
-
   justify-content: space-between;
   padding: 2% 2%;
   height: 10%;
-  width: 90%;
+  width: 100%;
   margin-top: 5%;
 
   button {
-    :nth-child(1) {
-      display: flex;
-      align-self: center;
-      border-radius: 50px 50px;
-      background-color: transparent;
-      border: none;
-      font-size: 30px;
-      cursor: pointer;
-      color: #32c28d;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 3px 3px 6px #bebebe, -3px -3px 6px #ffffff;
+    border: none;
+    padding: 2%;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 30px;
+    cursor: pointer;
 
+    :nth-child(1) {
+      color: #32c28d;
       :hover {
-        content: 'Blaáá';
         color: #2ca87b;
-        font-size: 2.2rem;
         transition: 0.3s;
-        transform: translatex(-10px);
-        filter: drop-shadow(1px 1px 5px lightgreen);
+        filter: drop-shadow(1px 1px 5px #00ff00);
+
       }
     }
 
     :nth-child(2) {
-      display: flex;
-      align-self: center;
-      border-radius: 50px 50px;
-      background-color: transparent;
-      border: none;
-      font-size: 30px;
-      cursor: pointer;
+
       color: #b00012;
       :hover {
         color: #ff001a;
-        font-size: 2.2rem;
         transition: 0.3s;
-        transform: translatey(-10px);
         filter: drop-shadow(1px 1px 5px red);
+
       }
     }
 
     :nth-child(3) {
-      display: flex;
-      align-self: center;
-      border-radius: 50px 50px;
-      background-color: transparent;
-      border: none;
-      font-size: 30px;
-      cursor: pointer;
       color: orange;
       :hover {
         color: orangered;
-        font-size: 2.2rem;
         transition: 0.3s;
-        transform: translatey(-10px);
         filter: drop-shadow(1px 1px 5px orange);
-      }
-    }
 
-    :nth-child(4) {
-      display: flex;
-      align-self: center;
-      border-radius: 50px 50px;
-      background-color: transparent;
-      border: none;
-      font-size: 30px;
-      cursor: pointer;
-      color: #19b5fe;
-      :hover {
-        color: #22a7f0;
-        font-size: 2.2rem;
-        transition: 0.3s;
-        transform: translatex(10px);
-        filter: drop-shadow(1px 1px 5px #89c4f4);
       }
     }
   }

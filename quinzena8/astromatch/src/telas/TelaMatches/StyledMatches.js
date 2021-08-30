@@ -23,19 +23,45 @@ export const Card = styled.section`
 
   padding: 1%;
   box-shadow: 10px 10px 28px #bababa, -10px -10px 28px #ffffff;
+`;
+
+export const DivButtons = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 2%;
+  height: 10%;
+  width: 100%;
+  margin-top: 5%;
+
+  button {
+    display: flex;
+    padding: 2%;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 3px 3px 6px #bebebe, -3px -3px 6px #ffffff;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
 
 
+    :nth-child(1) {
+      color: #19b5fe;
 
-
-  button{
-    border:none;
-    background-color: transparent ;
-    margin-top: 5% ;
-    cursor:pointer;
-    height: 10px;
-    align-self: center;
-    width: 20px;
-    font-size:1.5rem;
+      :hover {
+        color: #22a7f0;
+        transition: 0.3s;
+        filter: drop-shadow(1px 1px 5px #00ff00);
+      }
+    }
+    :nth-child(2) {
+      color: orange;
+      :hover {
+        color: orangered;
+        transition: 0.3s;
+        filter: drop-shadow(1px 1px 5px orange);
+      }
+    }
   }
 `;
 
@@ -47,6 +73,12 @@ export const ContainerMatches = styled.div`
   display: flex;
   align-items: center;
 
+  img {
+      border: 1px solid #d4d4d4;
+      width: 10%;
+      height: 100%;
+    }
+
   :hover {
     cursor: pointer;
     box-shadow: 10px 10px 28px #bababa, -10px -10px 28px #ffffff;
@@ -54,7 +86,7 @@ export const ContainerMatches = styled.div`
 
     img {
       border: 1px solid #d4d4d4;
-      width: 25%;
+      width: 20%;
       height: 200%;
     }
   }

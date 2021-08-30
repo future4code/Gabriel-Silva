@@ -1,12 +1,7 @@
 import { React, useState, useEffect } from 'react'
-
 import TelaInicial from './telas/TelaInicial/TelaInicial'
 import TelaMatches from './telas/TelaMatches/TelaMatches'
-
 import axios from 'axios'
-
-
-
 
 
 
@@ -29,9 +24,7 @@ function App() {
 
   return (
     <div>
-
       {telaCentral ? <TelaInicial mudaPagina={()=> mudaPagina()}/> : <TelaMatches mudaPagina={()=> mudaPagina()}/>}
-      
     </div>
   );
 }
