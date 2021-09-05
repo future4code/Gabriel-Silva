@@ -8,6 +8,7 @@ export const Container = styled.body`
   width: 100%;
   height: 100vh;
   background: linear-gradient(145deg, #f0f0f0, #cacaca);
+
 `;
 
 export const Card = styled.section`

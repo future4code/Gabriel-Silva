@@ -11,9 +11,10 @@ import {
   MdFavorite,
   MdHighlightOff,
   MdDehaze,
-  MdHistory,
+  MdColorLens,
 } from "react-icons/md";
 import axios from "axios";
+import RedesSociais from "../../components/RedesSociais";
 
 function TelaInicial(props) {
   const [perfil, setPerfil] = useState({});
@@ -104,6 +105,8 @@ function TelaInicial(props) {
             </button>
           </ContainerBottom>
         </Card>
+     
+     <RedesSociais/>
       </Container>
     </>
   );
