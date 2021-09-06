@@ -50,4 +50,10 @@ Um projeto tão grande como este, normalmente, começa com a elaboração de um 
 
 
 ## Imagens
+#### Tela inicial
+![image](https://user-images.githubusercontent.com/16105546/132251331-37ac7fb9-b837-4094-b348-d60586d89406.png)
+#### Tela de Matches
+![image](https://user-images.githubusercontent.com/16105546/132251389-2b4a9070-925f-49df-941b-c2e24f1d027e.png)
+#### Confirmação da limpeza do histórico de matches
+![image](https://user-images.githubusercontent.com/16105546/132251396-7fcf7cec-4291-4fbb-976c-1eb5e493d6dd.png)
 
