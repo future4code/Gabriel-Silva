@@ -1,6 +1,6 @@
 import React from "react";
 import Header from './components/Header'
-import TelaPrincipal from '../src/pages/PaginaApresentacao/index'
+import TelaPrincipal from './pages/HomePage/HomePage'
 import Footer from './components/Footer'
 
 

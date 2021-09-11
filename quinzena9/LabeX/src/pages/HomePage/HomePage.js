@@ -9,7 +9,7 @@ import {
   Imagem,
   ContainerCards,
   Cards
-} from "./indexStyle";
+} from "./HomePageStyle";
 
 const TelaPrincipal = (props) => {
   return (
