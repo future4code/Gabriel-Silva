@@ -10,7 +10,7 @@ export const GlobalStyled = createGlobalStyle`
         padding: 0;
         margin:0;
         box-sizing: border-box;
-        font-family: sans-serif;
+        font-family: 'Glory', sans-serif;
     }
     html{
         width: 100vw;

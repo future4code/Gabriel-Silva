@@ -38,6 +38,7 @@ const BotaoLogIn = styled.h3`
     visibility: hidden;
     transform: scaleX(0);
     -webkit-transition: all 0.2s ease-in-out 0s;
+            transition: all 0.2s ease-in-out 0s;
   }
 
   &:hover:before {

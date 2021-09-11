@@ -18,14 +18,13 @@ const Footers = styled.footer`
   }
 `;
 
-
-
 const Footer = (props) => {
   return (
     <>
       <Footers>
-        <h1>logo</h1>
-
+        <h1>
+          Footer
+        </h1>
       </Footers>
     </>
   );

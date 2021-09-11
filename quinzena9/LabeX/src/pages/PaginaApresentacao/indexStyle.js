@@ -17,7 +17,7 @@ export const DivApresentacao = styled.div`
   color: #fff;
 
   p {
-    padding-top: 5%;
+    margin-top: 5%;
     font-size: 1.2rem;
     color: #9466ff;
   }
@@ -27,6 +27,7 @@ export const DivApresentacao = styled.div`
   }
   h3 {
     font-size: 1.5rem;
+    padding-top: 4%;
   }
 
   div {
@@ -47,28 +48,38 @@ export const BotaoIngresso = styled.button`
   border: none;
   color: #fff;
   border-radius: 10px;
-  background-color: #372959;
-
+  background-color: #6833e4;
   font-size: 1rem;
   font-weight: 800;
   text-transform: uppercase;
   cursor: pointer;
+  margin-top: 8%;
+  transition: all 0.2s ease-in-out;
+
+  :hover {
+    background-color: #734bd1;
+    transition: all 0.2s ease-in-out;
+  }
 `;
 
 export const BotaoSaibaMais = styled.a`
   text-decoration: none;
-  height: 60px;
-  width: 300px;
+
   display: flex;
   align-items: center;
-  justify-content: space-around;
   padding: 0 90px;
   font-weight: 600;
   font-size: 1rem;
-  color: #fff;
-  background-color: transparent;
-  border: none;
+  color: #9466ff;
+
   cursor: pointer;
+  margin-top: 8%;
+  transition: all 0.2s ease-in-out;
+
+  :hover {
+    color: #26a65b;
+    transition: all 0.2s ease-in-out;
+  }
 `;
 
 export const ContainerCards = styled.section`
@@ -84,22 +95,19 @@ export const ContainerCards = styled.section`
 `;
 
 export const Cards = styled.div`
-    width: 20%;
-    height: 60vh;
-    border: 1px solid #372959;
-    border-radius: 15px;
-    margin:5% 2%;
+  width: 20%;
+  height: 60vh;
+  border: 1px solid #372959;
+  border-radius: 15px;
+  margin: 5% 2%;
 
-    cursor: pointer;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  :hover {
     transition: all 0.2s ease-in-out;
-    
-    :hover{
-        transition: all 0.2s ease-in-out;
-        transform: scale(1.09);
-        box-shadow: 1px 0 20px #372959;
-        background-color: #372959;
-        
-    }
-   
-
-`
+    transform: scale(1.09);
+    box-shadow: 1px 0 20px #372959;
+    background-color: #372959;
+  }
+`;
