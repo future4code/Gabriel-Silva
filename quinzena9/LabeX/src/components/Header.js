@@ -7,8 +7,9 @@ const Headers = styled.header`
   justify-content: space-between;
   align-items: center;
 
-  width: 100%;
-  background-color: rgb(0, 0, 0, 0.1);
+  width: 100%;  
+  background-color: #060607;
+
   height: 10vh;
 
   padding: 0 3%;

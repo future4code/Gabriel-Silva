@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import App from "./App";
 //Resetando HTML
 import { createGlobalStyle } from "styled-components";
-import backgroundGalaxy from "./assets/background-galaxy.jpg";
 
 export const GlobalStyled = createGlobalStyle`
     *{
@@ -19,8 +18,6 @@ export const GlobalStyled = createGlobalStyle`
 
     }
     body{
-      background-image: url(${backgroundGalaxy});
-      background-size: cover;
       background-color: #060607;
       overflow-x: hidden;
      

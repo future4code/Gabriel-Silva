@@ -29,7 +29,7 @@ const TelaPrincipal = (props) => {
             <BotaoIngresso>Embarque no foguete!</BotaoIngresso>
             <BotaoSaibaMais href="#cards">
              
-              <MdArrowDownward size="25" />
+              <MdArrowDownward />
               Saiba mais
             </BotaoSaibaMais>
           </div>

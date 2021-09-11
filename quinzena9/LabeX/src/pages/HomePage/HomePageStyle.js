@@ -1,9 +1,13 @@
 import styled from "styled-components";
+import backgroundGalaxy from "../../assets/background-galaxy.jpg";
 
 export const ContainerApresentacao = styled.section`
   display: flex;
   min-height: 100vh;
   width: 100%;
+
+  background-image: url(${backgroundGalaxy});
+  background-size: cover;
 `;
 
 export const DivApresentacao = styled.div`
@@ -20,6 +24,7 @@ export const DivApresentacao = styled.div`
     margin-top: 5%;
     font-size: 1.2rem;
     color: #9466ff;
+    font-weight: 600;
   }
   h1 {
     padding-top: 5%;
@@ -75,10 +80,12 @@ export const BotaoSaibaMais = styled.a`
   cursor: pointer;
   margin-top: 8%;
   transition: all 0.2s ease-in-out;
+  transition: 0.2s;
 
   :hover {
     color: #26a65b;
-    transition: all 0.2s ease-in-out;
+    transform: translateY(6px);
+
   }
 `;
 
