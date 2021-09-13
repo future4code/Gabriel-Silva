@@ -1,24 +1,27 @@
 import React from "react";
 import styled from "styled-components";
-import {IoRocketOutline} from "react-icons/io5"
+import { useHistory } from "react-router-dom";
+
+
+import { IoRocketOutline } from "react-icons/io5";
+import { RiAdminLine } from "react-icons/ri";
 
 const Headers = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  width: 100%;  
-  background-color: #060607;
+  width: 100%;
 
   height: 10vh;
 
   padding: 0 3%;
 
   h1 {
+    cursor: pointer;
     color: #9466ff;
-    span{
-    color: #26a65b;
-
+    span {
+      color: #26a65b;
     }
   }
 `;
@@ -39,7 +42,7 @@ const BotaoLogIn = styled.h3`
     visibility: hidden;
     transform: scaleX(0);
     -webkit-transition: all 0.2s ease-in-out 0s;
-            transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
   }
 
   &:hover:before {
@@ -52,20 +55,31 @@ const BotaoLogIn = styled.h3`
   }
 `;
 
-
-
-
-const CliqueLogin = () =>{
-  alert("Clicou no login")
-}
-
 const Header = (props) => {
+  const history = useHistory()
+
+  const goToHome = () => {
+    history.push("/");
+  };
+  const goToLogin = () => {
+    history.push("/LoginPage");
+  };
+
+  
+
+
   return (
     <>
       <Headers>
-        <h1>Labe<span>X</span><IoRocketOutline/></h1>
+        <h1 onClick={goToHome}>
+          Labe<span>X</span>
+          <IoRocketOutline />
+        </h1>
 
-        <BotaoLogIn onClick={CliqueLogin}>Login</BotaoLogIn>
+        <BotaoLogIn onClick={goToLogin}>
+          <RiAdminLine />
+          adm
+        </BotaoLogIn>
       </Headers>
     </>
   );

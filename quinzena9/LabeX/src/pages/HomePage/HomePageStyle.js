@@ -1,13 +1,9 @@
 import styled from "styled-components";
-import backgroundGalaxy from "../../assets/background-galaxy.jpg";
 
 export const ContainerApresentacao = styled.section`
   display: flex;
   min-height: 100vh;
   width: 100%;
-
-  background-image: url(${backgroundGalaxy});
-  background-size: cover;
 `;
 
 export const DivApresentacao = styled.div`
@@ -85,7 +81,6 @@ export const BotaoSaibaMais = styled.a`
   :hover {
     color: #26a65b;
     transform: translateY(6px);
-
   }
 `;
 

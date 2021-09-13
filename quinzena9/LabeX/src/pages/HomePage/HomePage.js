@@ -1,6 +1,8 @@
 import React from "react";
 import { MdArrowDownward } from "react-icons/md";
 import Rocket from "../../assets/Rocket.png";
+import { useHistory } from "react-router-dom";
+
 import {
   ContainerApresentacao,
   DivApresentacao,
@@ -8,12 +10,21 @@ import {
   BotaoSaibaMais,
   Imagem,
   ContainerCards,
-  Cards
+  Cards,
 } from "./HomePageStyle";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 
 const TelaPrincipal = (props) => {
+  const history = useHistory()
+
+  const goToPage = () =>{
+    history.push("/ListTripsPage")
+  }
+
   return (
     <>
+      <Header />
       <ContainerApresentacao>
         <DivApresentacao>
           <div>
@@ -26,9 +37,8 @@ const TelaPrincipal = (props) => {
             conheça lugares e criaturas incríveis!
           </h3>
           <div>
-            <BotaoIngresso>Embarque no foguete!</BotaoIngresso>
+            <BotaoIngresso onClick={goToPage}>Embarque no foguete!</BotaoIngresso>
             <BotaoSaibaMais href="#cards">
-             
               <MdArrowDownward />
               Saiba mais
             </BotaoSaibaMais>
@@ -36,10 +46,12 @@ const TelaPrincipal = (props) => {
         </DivApresentacao>
       </ContainerApresentacao>
       <ContainerCards id="cards">
-        <Cards/>
-        <Cards/>
-        <Cards/>
+        <Cards />
+        <Cards />
+        <Cards />
       </ContainerCards>
+
+      <Footer />
     </>
   );
 };
