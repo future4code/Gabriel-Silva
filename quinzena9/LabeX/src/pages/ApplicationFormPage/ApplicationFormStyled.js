@@ -2,17 +2,35 @@ import styled from "styled-components";
 
 export const DivContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   height: 85vh;
   width: 100%;
+
 `;
+
+export const VoltarParaViagens = styled.button`
+height: 5vh;
+    width: 100%;
+    background-color: #e54b4b;
+
+    transition: background-color 0.2s;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1rem;
+
+    :hover {
+      background-color: #e03a3a;
+    }
+`
 
 export const CardInscricao = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 
   height: 98%;
   width: 30%;
@@ -22,6 +40,7 @@ export const CardInscricao = styled.div`
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.8);
 
   h1 {
+    margin-top: 5%;
     display: flex;
     align-items: center;
     justify-content: center;

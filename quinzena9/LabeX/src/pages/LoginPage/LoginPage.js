@@ -1,5 +1,7 @@
 import React from "react";
 import Header from "../../components/Header";
+import { useHistory } from "react-router-dom";
+
 import {
   ContainerLogin,
   FormContainer,
@@ -15,6 +17,11 @@ import {
 } from "react-icons/ri";
 
 const LoginPage = () => {
+  const history = useHistory();
+  const goToPage = () => {
+    history.push("/AdminHomePage");
+  };
+
   return (
     <>
       <Header />
@@ -38,7 +45,7 @@ const LoginPage = () => {
               </span>
               <InputSenha placeholder="Senha" type="password" reauired />
             </label>
-            <BotaoEntrar>LogIn</BotaoEntrar>
+            <BotaoEntrar onClick={goToPage}>LogIn</BotaoEntrar>
           </DivInputs>
         </FormContainer>
       </ContainerLogin>

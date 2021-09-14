@@ -5,19 +5,26 @@ import {
   DivContainer,
   CardInscricao,
   Formulario,
+  VoltarParaViagens,
 } from "./ApplicationFormStyled";
 
+import { useHistory } from "react-router-dom";
+
 const ApplicationFormPage = () => {
+  const history = useHistory();
+  const goToPage = () => {
+    history.push("/ListTripsPage");
+  };
+
   return (
     <>
       <Header />
       <DivContainer>
         <CardInscricao>
           <h1>
-            {" "}
             <span>
               <RiProfileLine />
-            </span>{" "}
+            </span>
             Fomulário de inscrição
           </h1>
           <Formulario>
@@ -33,6 +40,7 @@ const ApplicationFormPage = () => {
             </select>
             <button>Enviar</button>
           </Formulario>
+          <VoltarParaViagens onClick={goToPage}>Voltar para listas de viagens</VoltarParaViagens>
         </CardInscricao>
       </DivContainer>
     </>
