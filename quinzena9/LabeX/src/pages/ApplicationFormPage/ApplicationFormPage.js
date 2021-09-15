@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Header from "../../components/Header";
 import { RiProfileLine } from "react-icons/ri";
 import {
@@ -15,6 +15,14 @@ const ApplicationFormPage = () => {
   const goToPage = () => {
     history.push("/ListTripsPage");
   };
+
+
+  useEffect(()=> {
+    document.title = "Formulário de inscrição" 
+}, [])
+
+
+
 
   return (
     <>
@@ -33,7 +41,7 @@ const ApplicationFormPage = () => {
             </select>
             <input type="text" placeholder="Nome"></input>
             <input type="number" placeholder="Idade"></input>
-            <input type="text" placeholder="Descrição"></input>
+            <input type="text" placeholder="Porque o desejo da viagem?"></input>
             <input type="text" placeholder="Profissão"></input>
             <select>
               <option value="">País de origem</option>

@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 
-
 import { IoRocketOutline } from "react-icons/io5";
 import { RiAdminLine } from "react-icons/ri";
 
@@ -53,10 +52,14 @@ const BotaoLogIn = styled.h3`
   @media (max-width: 300px) {
     margin: 2rem 2rem 0 0;
   }
+
+  span {
+    color: #26a65b;
+  }
 `;
 
 const Header = (props) => {
-  const history = useHistory()
+  const history = useHistory();
 
   const goToHome = () => {
     history.push("/");
@@ -65,9 +68,6 @@ const Header = (props) => {
     history.push("/LoginPage");
   };
 
-  
-
-
   return (
     <>
       <Headers>
@@ -75,8 +75,8 @@ const Header = (props) => {
           Labe<span>X</span>
           <IoRocketOutline />
         </h1>
-
         <BotaoLogIn onClick={goToLogin}>
+          <span>|</span>
           <RiAdminLine />
           adm
         </BotaoLogIn>

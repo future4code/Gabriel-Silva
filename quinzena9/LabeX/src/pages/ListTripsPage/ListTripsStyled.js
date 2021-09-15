@@ -53,7 +53,7 @@ export const Cards = styled.div`
     height: 10%;
     width: 90%;
     background-color: rgba(38, 166, 91, 0.5);
-
+    text-transform: uppercase;
     color: #d1d1d1;
     font-weight: 600;
     font-size: 1rem;

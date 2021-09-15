@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import TelaPrincipal from "../pages/HomePage/HomePage";
 import LoginPage from "../pages/LoginPage/LoginPage";
@@ -9,13 +9,16 @@ import Error from "../pages/Error";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 const Routes = () => {
+
+
+
   return (
     <>
       <BrowserRouter>
         <Switch>
           <Route exact path={"/"}>
             <TelaPrincipal />
-          </Route>
+            </Route>
 
           <Route exact path={"/LoginPage"}>
             <LoginPage />

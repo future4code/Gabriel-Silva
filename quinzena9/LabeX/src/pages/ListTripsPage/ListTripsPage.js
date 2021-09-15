@@ -14,6 +14,9 @@ import {
 } from "react-icons/io5";
 import axios from "axios";
 
+
+
+
 const ListTripsPage = () => {
   const history = useHistory();
   const goToPage = () => {
@@ -33,6 +36,7 @@ const ListTripsPage = () => {
 
   useEffect(() => {
     PegarViagem();
+    document.title = "Viagens disponíveis"
   }, []);
 
   return (
@@ -70,9 +74,6 @@ const ListTripsPage = () => {
               </Cards>
             );
           })}
-
-
-
         </ContainerCards>
       </ContainerViagens>
       <Footer />

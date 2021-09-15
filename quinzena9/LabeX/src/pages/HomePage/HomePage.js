@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { MdArrowDownward } from "react-icons/md";
 import Rocket from "../../assets/Rocket.png";
 import { useHistory } from "react-router-dom";
@@ -21,6 +21,10 @@ const TelaPrincipal = (props) => {
   const goToPage = () =>{
     history.push("/ListTripsPage")
   }
+
+  useEffect(()=> {
+    document.title = "Home" 
+}, [])
 
   return (
     <>

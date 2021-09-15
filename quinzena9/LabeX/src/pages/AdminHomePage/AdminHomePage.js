@@ -11,12 +11,17 @@ import {
 } from "./AdminHomeStyled";
 
 import { useHistory } from "react-router-dom";
+import { useEffect } from "react";
 
 const AdminHomePage = () => {
   const history = useHistory();
   const goToPage = () => {
     history.push("/LoginPage");
   };
+
+  useEffect(()=> {
+    document.title = "Painel de Controle" 
+}, [])
 
   return (
     <>
