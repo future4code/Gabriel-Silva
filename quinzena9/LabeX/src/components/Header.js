@@ -65,8 +65,14 @@ const Header = (props) => {
     history.push("/");
   };
   const goToLogin = () => {
-    history.push("/LoginPage");
-  };
+    const token = localStorage.getItem('token')
+
+    if (token) {
+      history.push('/AdminHomePage')
+    } else {
+      history.push('/LoginPage')
+    }
+  }
 
   return (
     <>

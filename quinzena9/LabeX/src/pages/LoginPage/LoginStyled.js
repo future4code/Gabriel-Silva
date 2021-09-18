@@ -61,9 +61,10 @@ export const InputEmail = styled.input`
   transition: background-color 0.3s;
   color: #eee;
 
-  :hover {
+  :hover{
     background-color: #434a52;
   }
+
 `;
 export const InputSenha = styled.input`
   height: 6vh;

@@ -73,21 +73,21 @@ const Footer = (props) => {
       </Footers>
       <DivFooter>
         <div>
-          <a href="https://www.facebook.com" target="_blank">
+          <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
             <FaFacebook></FaFacebook>
           </a>
-          <a href="https://www.instagram.com" target="_blank">
+          <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
             <FaInstagram />
           </a>
-          <a href="https://www.linkedin.com/in/gabazevdo" target="_blank">
+          <a href="https://www.linkedin.com/in/gabazevdo" target="_blank" rel="noreferrer">
             <FaLinkedin />
           </a>
-          <a href="https://www.github.com/gabazevdo" target="_blank">
+          <a href="https://www.github.com/gabazevdo" target="_blank" rel="noreferrer">
             <FaGithub />
           </a>
         </div>
-        <a href="https://www.labenu.com.br" target="_blank">
-          <img src={LogoLabenu}></img>
+        <a href="https://www.labenu.com.br" target="_blank" rel="noreferrer">
+          <img src={LogoLabenu} alt="Logo Labenu"></img>
         </a>
       </DivFooter>
     </>

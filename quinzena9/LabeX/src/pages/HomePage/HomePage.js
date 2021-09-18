@@ -1,8 +1,9 @@
-import React, {useEffect} from "react";
+import React, { useEffect, useState } from "react";
 import { MdArrowDownward } from "react-icons/md";
 import Rocket from "../../assets/Rocket.png";
 import { useHistory } from "react-router-dom";
-
+import axios from "axios";
+import { BASE_URL } from "../../constants/BASE_URL";
 import {
   ContainerApresentacao,
   DivApresentacao,
@@ -11,20 +12,41 @@ import {
   Imagem,
   ContainerCards,
   Cards,
+  DivSolitaria,
 } from "./HomePageStyle";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
 const TelaPrincipal = (props) => {
-  const history = useHistory()
+  const history = useHistory();
+  const [listTrip, setListTrip] = useState([{}]);
 
-  const goToPage = () =>{
-    history.push("/ListTripsPage")
-  }
+  const PegarViagem = () => {
+    axios
+      .get(`${BASE_URL}/trips`)
+      .then((res) => {
+        setListTrip(res.data.trips);
+      })
+      .catch((err) => {
+        alert("Algo deu ruim");
+      });
+  };
+  useEffect(() => {
+    document.title = "Home";
+    PegarViagem();
+  }, []);
 
-  useEffect(()=> {
-    document.title = "Home" 
-}, [])
+  const goToPage = () => {
+    history.push("/ListTripsPage");
+  };
+
+  const cardsHome = listTrip.map((trips) => {
+    return (
+      <Cards>
+        <p onClick={goToPage}>{trips.name}</p>
+      </Cards>
+    );
+  });
 
   return (
     <>
@@ -41,20 +63,25 @@ const TelaPrincipal = (props) => {
             conheça lugares e criaturas incríveis!
           </h3>
           <div>
-            <BotaoIngresso onClick={goToPage}>Embarque no foguete!</BotaoIngresso>
+            <BotaoIngresso onClick={goToPage}>
+              Embarque no foguete!
+            </BotaoIngresso>
             <BotaoSaibaMais href="#cards">
               <MdArrowDownward />
-              Saiba mais
+              Viagens disponíveis
             </BotaoSaibaMais>
           </div>
         </DivApresentacao>
       </ContainerApresentacao>
-      <ContainerCards id="cards">
-        <Cards />
-        <Cards />
-        <Cards />
+      <ContainerCards>
+        <DivSolitaria id="cards">
+          <h1>Conheça lugares incríveis</h1>
+        </DivSolitaria>
+        {cardsHome}
+        <DivSolitaria id="cards">
+          <h3>  E ESPERE PELO INESPE R A D O !</h3>
+        </DivSolitaria>
       </ContainerCards>
-
       <Footer />
     </>
   );

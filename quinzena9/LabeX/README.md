@@ -11,4 +11,19 @@
 
 [Font utilizada](https://fonts.google.com/specimen/Glory)
 
-[REACT ROUTER](https://reactrouter.com/web/guides/quick-start)
+- Alertas bonitos!
+[SweetAlert2](https://sweetalert2.github.io/#input-types)
+
+### As rotas entre as páginas utilizei  [REACT ROUTER](https://reactrouter.com/web/guides/quick-start)
+
+
+
+### [HMR]
+Removi mensagem que constava no console.log [Utilizando esse tutorial](https://github.com/webpack/webpack-dev-server/issues/2166)
+~~~
+[HMR] Waiting for update signal from WDS...
+~~~ 
+
+|Email  |Senha  |
+|--|--|
+| admin@labex.com | 123456 |

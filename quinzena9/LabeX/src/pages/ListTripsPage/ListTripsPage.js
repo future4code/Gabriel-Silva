@@ -3,8 +3,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { useHistory } from "react-router-dom";
 import { ContainerViagens, ContainerCards, Cards } from "./ListTripsStyled";
-import { BASE_URL } from "../../constants/Constants";
-
+import { BASE_URL } from "../../constants/BASE_URL";
 import {
   IoPlanetOutline,
   IoCalendarOutline,
@@ -13,9 +12,6 @@ import {
   IoRocketOutline,
 } from "react-icons/io5";
 import axios from "axios";
-
-
-
 
 const ListTripsPage = () => {
   const history = useHistory();
@@ -31,12 +27,15 @@ const ListTripsPage = () => {
       .then((res) => {
         setListTrip(res.data.trips);
       })
-      .catch((err) => {});
+      .catch((err) => {
+      alert("Algo deu ruim")
+
+      });
   };
 
   useEffect(() => {
     PegarViagem();
-    document.title = "Viagens disponíveis"
+    document.title = "Viagens disponíveis";
   }, []);
 
   return (
@@ -62,7 +61,7 @@ const ListTripsPage = () => {
                 </label>
 
                 <label>
-                  <IoMapOutline /> Aventura para{" "}
+                  <IoMapOutline /> Aventura para
                   <p>{trips.durationInDays} dias</p>
                 </label>
 

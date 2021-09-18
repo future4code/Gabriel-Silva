@@ -84,32 +84,54 @@ export const BotaoSaibaMais = styled.a`
   }
 `;
 
-export const ContainerCards = styled.section`
+export const ContainerCards = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 70vh;
-  width: 100%;
+  justify-self: center;
+  flex-wrap: wrap;
+  min-height: 20vh;
+  width: 90%;
+  margin: 1%;
 
   p {
+    font-weight: 800;
+    font-size: 1.3rem;
     color: #fff;
   }
 `;
 
 export const Cards = styled.div`
-  width: 20%;
-  height: 60vh;
+  width: 25%;
+  height: 6vh;
   border: 1px solid #372959;
-  border-radius: 15px;
-  margin: 5% 2%;
+  border-radius: 10px;
+  color: #fff;
+  margin: 2%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 
   :hover {
-    transition: all 0.2s ease-in-out;
-    transform: scale(1.09);
-    box-shadow: 1px 0 20px #372959;
+    transition: all 0.2s ease-in;
+    transform: scale(1.05);
     background-color: #372959;
   }
+`;
+
+export const DivSolitaria = styled.div`
+  width: 90%;
+  padding: 2%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.4rem;
+  text-shadow: 0 -5px 15px rgba(0, 6, 0, 0.9);
+  letter-spacing: 0.2rem;
 `;
