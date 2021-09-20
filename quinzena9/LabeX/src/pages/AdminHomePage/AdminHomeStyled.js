@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const DivContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 85vh;
+  height: 90vh;
   width: 100%;
   padding: 0 8%;
 
@@ -32,7 +32,7 @@ export const Formulario = styled.form`
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  height: 60vh;
+  height: 80vh;
   width: 100%;
 
   select {
@@ -96,7 +96,7 @@ export const CardInscricao = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  height: 98%;
+  height: 90%;
   width: 30%;
   min-width: 400px;
   background-color: #2c3338;
@@ -124,7 +124,7 @@ export const CardInscricao2 = styled.div`
 
   overflow-x: hidden;
   overflow-y: hidden;
-  height: 98%;
+  height: 90%;
   width: 60%;
   min-width: 400px;
   background-color: #2c3338;

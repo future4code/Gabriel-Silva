@@ -42,8 +42,9 @@ html{
 body{
   background-color: #060607;
   background-image: url(${backgroundGalaxy});
+  background-size: 190%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-attachment: local;
   overflow-x: hidden;
       
       ::-webkit-scrollbar {

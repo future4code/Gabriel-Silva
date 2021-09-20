@@ -16,14 +16,13 @@ export const ContainerCards = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   flex-wrap: wrap;
 
-
   @media screen and (min-device-width: 320px) and (max-device-width: 480px) {
-      display: flex;
-      flex-direction: column;
-    }
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const Cards = styled.div`
@@ -34,7 +33,7 @@ export const Cards = styled.div`
   border-radius: 15px;
   margin: 1%;
   transition: all 0.2s ease-in-out;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -42,13 +41,12 @@ export const Cards = styled.div`
   padding: 0 20px;
   background-color: rgba(55, 41, 89, 0.89);
 
-  
-    h1{
-      align-self: center ;
-    }
-    p{
-      font-size: 1.2rem;
-    }
+  h1 {
+    align-self: center;
+  }
+  p {
+    font-size: 1.2rem;
+  }
   button {
     align-self: center;
     height: 10%;

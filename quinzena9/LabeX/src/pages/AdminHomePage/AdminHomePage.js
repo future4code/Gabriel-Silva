@@ -98,6 +98,8 @@ const AdminHomePage = () => {
     createTrip(body, requestHeaders);
   };
 
+  
+
   const deleteTrip = (id) => {
     const requestHeaders = {
       headers: {

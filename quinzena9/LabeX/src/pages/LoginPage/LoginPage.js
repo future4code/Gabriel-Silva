@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import Header from "../../components/Header";
-import { useHistory } from "react-router-dom";
+import { useHistory, } from "react-router-dom";
 import axios from "axios";
+import { Loading } from "../../components/Loading";
 import { BASE_URL } from "../../constants/BASE_URL";
 import useForm from "../../Hooks/useForm";
 import {
@@ -16,6 +17,7 @@ import { RiAdminLine, RiEmotionHappyLine, RiLock2Line } from "react-icons/ri";
 
 const LoginPage = () => {
   const history = useHistory();
+  const [loading, setLoading] = useState(false);
 
   const goToPage = () => {
     history.push("/AdminHomePage");
@@ -36,16 +38,21 @@ const LoginPage = () => {
   };
 
   const login = () => {
+    setLoading(true);
+
     axios
       .post(`${BASE_URL}/login`, form)
       .then((response) => {
         localStorage.setItem("token", response.data.token);
+        setLoading(false);
 
         goToPage();
       })
       .catch((error) => {
         console.log(error.message);
         window.alert("E-mail ou senha inválidos!");
+        setLoading(false);
+
       });
   };
 
@@ -55,6 +62,7 @@ const LoginPage = () => {
       <ContainerLogin>
         <FormContainer onSubmit={onSubmitForm}>
           <DivInputs>
+            {loading && <Loading/>}
             <RiAdminLine size="80" color="#26A65B" />
             <label>
               <span>

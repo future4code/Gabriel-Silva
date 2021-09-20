@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import { useHistory } from "react-router-dom";
 import { ContainerViagens, ContainerCards, Cards } from "./ListTripsStyled";
 import { BASE_URL } from "../../constants/BASE_URL";
+import { Loading } from "../../components/Loading";
 import {
   IoPlanetOutline,
   IoCalendarOutline,
@@ -20,17 +21,19 @@ const ListTripsPage = () => {
   };
 
   const [listTrip, setListTrip] = useState([{}]);
+  const [loading, setLoading] = useState(false);
 
   const PegarViagem = () => {
+    setLoading(true);
     axios
       .get(`${BASE_URL}/trips`)
       .then((res) => {
         setListTrip(res.data.trips);
       })
       .catch((err) => {
-      alert("Algo deu ruim")
-
-      });
+        alert("Algo deu ruim");
+      })
+      .finally(() => setLoading(false));
   };
 
   useEffect(() => {
@@ -42,6 +45,7 @@ const ListTripsPage = () => {
     <>
       <Header />
       <ContainerViagens>
+         {loading && <Loading />}
         <h1>
           Viagens disponíveis <IoRocketOutline />
         </h1>
