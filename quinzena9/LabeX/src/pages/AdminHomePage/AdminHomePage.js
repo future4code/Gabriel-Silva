@@ -111,9 +111,9 @@ const AdminHomePage = () => {
       text: "Não será possível reverter isso!",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
+      confirmButtonColor: "#26a65b",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Sim, apague!",
+      confirmButtonText: "Sim!",
       cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.isConfirmed) {
