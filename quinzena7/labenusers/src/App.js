@@ -1,11 +1,12 @@
+import React from "react";
+import TelaPrincipal from "./components/TelaPrincipal/TelaPrincipal";
 
-
-function App() {
+export default class App extends React.Component{
+  render(){
   return (
-    <div>
-      <h1>Iniciando projeto LabenuUsers</h1>
-    </div>
-  );
+    <>
+      <TelaPrincipal />
+    </>
+  )
+  }
 }
-
-export default App;
