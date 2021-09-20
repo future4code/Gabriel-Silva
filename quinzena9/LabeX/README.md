@@ -1,8 +1,13 @@
 # LabeX
 
-Encontre as melhores viagens espaciais!
 
-## Produção
+Atividade quinzenal individual desenvolvida pela [Labenu](https://www.labenu.com.br/).
+O objetivo é aplicar e desafiar a pratica dos conceitos ministrados nas aulas de React.
+
+
+### Encontre as melhores viagens espaciais!
+
+## Link Surge
 
 [Acesso ao Labex](https://gabazevdo-labex.surge.sh/)
 |Email  |Senha  |
@@ -10,16 +15,16 @@ Encontre as melhores viagens espaciais!
 | admin@labex.com | 123456 |
 
 
-## Desenvolvimento
-### ReactJs
- - - Router
- - - useState
- - - useEffects
+### Conceitos aplicados:
+-  Componentes de classe
+-  Componentes Funcionais
+-  API utilizando Axios
+-  Hooks
+-  UseEffects e UseState 
+-  Router
 
 
-
-
-### API
+### Documentação API
 
 - [Documentação API](https://documenter.getpostman.com/view/9133542/TzCTZkQr)
 
@@ -30,6 +35,7 @@ Encontre as melhores viagens espaciais!
 ### Estilização
 - [Styled-components](https://styled-components.com/)
 
+- - [React-icons](https://react-icons.github.io/react-icons)
 - - [Wallpaper](https://wall.alphacoders.com/big.php?i=520921&lang=Swedish)
 
 - - [Font utilizada](https://fonts.google.com/specimen/Glory)
